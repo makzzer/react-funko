@@ -57,7 +57,7 @@ const App = () => {
           <h2 className="text-white text-2xl mb-2 px-auto">
             Descubrí el proximo Funko de tu colección
           </h2>
-          <button className="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
+          <button className="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full">
             Comprar{" "}
           </button>
         </div>
@@ -75,7 +75,8 @@ const App = () => {
               Disfruta de una saga que sigue agregando personajes a su
               colección.
             </p>
-            <div className="border border-red-400"> </div>
+            <div className="border border-red-400 mb-2"> </div>
+            <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full">Ver colección</button>
           </div>
 
           <div>
