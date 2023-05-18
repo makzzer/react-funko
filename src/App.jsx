@@ -8,7 +8,7 @@ const App = () => {
             <div className="flex justify-items-center justify-between">
               <div>
                 <img
-                  src="./assets/images/logo_light_horizontal.svg"
+                  src="src/assets/images/logo_light_horizontal.svg"
                   alt="loguito"
                   href=""
                 />
@@ -82,7 +82,7 @@ const App = () => {
           <div>
             <img
               className="w-full pe-20"
-              src="./assets/images/baby-yoda-1.webp"
+              src="src/assets/images/baby-yoda-1.webp"
               alt=""
             />
           </div>
