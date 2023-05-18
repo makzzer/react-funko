@@ -1,3 +1,8 @@
+import IconLogo from "./components/icons/IconLogo.jsx";
+
+
+
+
 const App = () => {
   return (
     <>
@@ -6,13 +11,11 @@ const App = () => {
         <nav className="bg-gray-800 pt-4 pb-4">
           <div className="container px-auto mx-auto">
             <div className="flex justify-items-center justify-between">
-              <div>
-                <img
-                  src="src/assets/images/logo_light_horizontal.svg"
-                  alt="loguito"
-                  href=""
-                />
-              </div>
+              
+                <button> <IconLogo/> </button>
+                
+  
+            
               <div className="mt-4 items-stretch">
                 <a
                   href=""
