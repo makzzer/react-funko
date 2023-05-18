@@ -1,6 +1,7 @@
 import IconLogo from "./components/icons/IconLogo.jsx";
 
 
+const rutaYoda = 'src/assets/images/yoda.webp'
 
 
 const App = () => {
@@ -85,7 +86,7 @@ const App = () => {
           <div>
             <img
               className="w-full pe-20"
-              src="./assets/images/baby-yoda-1.webp"
+              src={rutaYoda}
               alt=""
             />
           </div>
