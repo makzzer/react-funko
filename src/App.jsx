@@ -53,7 +53,7 @@ const App = () => {
         className="
         h-600 bg-fixed bg-cover bg-center
 
-      bg-[url('src/assets/images/funkos_cover.jpg')]"
+      bg-[url('./assets/images/funkos_cover.jpg')]"
       >
         <div className="p-10">
           <h1 className="text-white text-4xl mb-2 px-auto">Nuevos ingresos</h1>
@@ -85,7 +85,7 @@ const App = () => {
           <div>
             <img
               className="w-full pe-20"
-              src="src/assets/images/baby-yoda-1.webp"
+              src="./assets/images/baby-yoda-1.webp"
               alt=""
             />
           </div>
