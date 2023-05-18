@@ -8,7 +8,7 @@ const App = () => {
             <div className="flex justify-items-center justify-between">
               <div>
                 <img
-                  src="assets/images/logo_light_horizontal.svg"
+                  src="src\assets\images\logo_light_horizontal.svg"
                   alt="loguito"
                   href=""
                 />
@@ -16,25 +16,25 @@ const App = () => {
               <div className="mt-4 items-stretch">
                 <a
                   href=""
-                  className="text-gray-300 hover:bg-red-400 px-3 py-2 rounded-md text-2xl font-medium transition  hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+                  className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium transition  hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
                 >
                   Shop
                 </a>
                 <a
                   href=""
-                  className="text-gray-300 hover:bg-red-400 px-3 py-2 rounded-md text-2xl font-medium transition  hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+                  className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium transition  hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
                 >
                   Contacto
                 </a>
                 <a
                   href=""
-                  className="text-gray-300 hover:bg-red-400 px-3 py-2 rounded-md text-2xl font-medium transition  hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+                  className="text-gray-300  px-3 py-2 rounded-md text-2xl font-medium transition  hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
                 >
                   Ingresar
                 </a>
                 <a
                   href=""
-                  className="text-gray-300 hover:bg-red-400 px-3 py-2 rounded-md text-2xl font-medium transition  hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+                  className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium transition  hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
                 >
                   Carrito
                 </a>
@@ -82,7 +82,7 @@ const App = () => {
           <div>
             <img
               className="w-full pe-20"
-              src="./assets/images/baby-yoda-1.webp"
+              src="src/assets/images/baby-yoda-1.webp"
               alt=""
             />
           </div>
