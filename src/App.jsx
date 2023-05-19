@@ -13,7 +13,7 @@ const App = () => {
   const [elementosLand, SetElem] = useState(elementosLanding);
 
   return (
-    <div className="container mx-auto">
+    <>
       <NavBar />
 
       <div className="h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
@@ -25,7 +25,7 @@ const App = () => {
       <main>
         <ListaItemsTienda elementosLand={elementosLand} />
       </main>
-    </div>
+      </>
   );
 };
 
