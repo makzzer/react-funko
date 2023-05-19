@@ -9,7 +9,7 @@ const NavBar = () => {
             <IconLogo />
           </button>
 
-          <div className="hidden md:flex">
+          <div className="hidden md:flex md:justify-center md:mx-auto">
             <a
               href=""
               className="text-gray-300 px-3 py-2 rounded-md text-lg font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
@@ -35,8 +35,10 @@ const NavBar = () => {
               Carrito
             </a>
           </div>
+
         </div>
       </div>
+
     </nav>
   );
 }
