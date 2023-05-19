@@ -3,9 +3,11 @@ import IconLogo from "./icons/IconLogo"
 const NavBar = () => {
     return (
 
-        <nav className="bg-gray-900 pt-4 pb-4">
-            <div className="container px-auto mx-auto">
-                <div className="flex justify-items-center justify-between">
+
+        
+        <nav className="bg-gray-900 py-4 px-4">
+            <div className="container px-auto mx-auto h-full">
+                <div className="flex justify-items-center py-4 mx-20 justify-between h-full ">
 
                     <button> <IconLogo /> </button>
 

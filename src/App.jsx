@@ -15,19 +15,22 @@ const App = () => {
   return (
 
     <>
-      <NavBar />
-      <div className="h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
-        <div className="container mx-auto h-full">
-          <Branding />
-        </div>
-      </div>
-
 
       <header>
 
 
+
+        <div className="h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
+          <NavBar />
+          <div className="container mx-auto h-full">
+            <Branding />
+          </div>
+        </div>
       </header>
-      <main>
+
+
+
+      <main className="container mx-auto">
         <ListaItemsTienda elementosLand={elementosLand} />
       </main>
 
