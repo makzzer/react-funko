@@ -4,7 +4,7 @@ const ItemTienda = ({ id, title, description, img }) => {
 
   return (
     <>
-      <div className=" flex flex-col mb-1 mx-auto px-auto justify-around container md:flex-row max-w-screen-2xl">
+      <div className=" flex flex-col mb-1 mx-auto px-auto justify-around  container md:flex-row max-w-screen-2xl">
 
         <article className="flex flex-col md:text-start text-center mt-2 mx-auto justify-center">
 
