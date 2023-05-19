@@ -6,7 +6,7 @@ const ItemTienda = ({ id, title, description, img }) => {
     <>
       <div className=" flex flex-col mb-1 mx-auto px-auto justify-around  container md:flex-row max-w-screen-2xl">
 
-        <article className="flex flex-col md:text-start text-center mt-2 mx-auto justify-center">
+        <article className="flex flex-col md:text-start text-center  mx-auto justify-center">
 
           <h3 className="text-gray-800 text-4xl mb-4 whitespace-pre-line">
             {title}
@@ -21,7 +21,7 @@ const ItemTienda = ({ id, title, description, img }) => {
 
         </article>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-4 md:mt-0">
           <img
             className="w-full px-auto"
             src={img}
