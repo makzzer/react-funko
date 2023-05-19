@@ -16,7 +16,7 @@ const ItemTienda = ({ id, title, description, img }) => {
           </p>
           <div className="border border-red-400 mb-4"> </div>
           <div className="flex justify-center md:justify-start">
-            <button className="px-8 py-4 text-lg bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-full">Ver colección</button>
+            <button className="px-20 py-4 text-2xl bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-full">Ver colección</button>
           </div>
 
         </article>
