@@ -2,7 +2,7 @@ const Branding = () => {
     return (
 
         <div className="flex items-center justify-center h-full">
-          <div className="container py-20 px-20">
+          <div className="container py-auto px-auto">
             <h1 className="text-white text-4xl mb-2">Nuevos ingresos</h1>
             <h2 className="text-white text-2xl mb-2">
               Descubrí el próximo Funko de tu colección
