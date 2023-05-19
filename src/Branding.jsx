@@ -1,8 +1,8 @@
 const Branding = () => {
     return (
 
-        <div className="flex alitems-center justify-center h-full py-auto px-auto">
-          <div className="container">
+        <div className="flex flex-col items-center md:items-start justify-center h-full py-auto px-auto container mx-auto ">
+
             <h1 className="text-white text-4xl mb-2">Nuevos ingresos</h1>
             <h2 className="text-white text-2xl mb-2">
               Descubrí el próximo Funko de tu colección
@@ -12,7 +12,6 @@ const Branding = () => {
                 Comprar
               </button>
             </div>
-          </div>
 
         </div>
 
