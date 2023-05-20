@@ -17,7 +17,9 @@ const App = () => {
 
   return (
     <>
-      <NavBar />
+      <header className="bg-gray-900">
+        <NavBar />
+      </header>
 
       <div className="md:mb-0 mb-8 h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
         <div className="container mx-auto h-full">
