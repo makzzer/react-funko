@@ -7,7 +7,8 @@ const NavBar = () => {
 
 
         <div className="flex md:flex-row flex-col items-center justify-around container mx-auto max-w-screen-2xl">
-          <button className="justify-start">
+          
+          <button className="justify-start transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-none duration-300">
             <IconLogo />
           </button>
 
