@@ -36,7 +36,9 @@ const NavBar = () => {
             >
               Ingresar
             </a>
+            {/*
             <button className="hover:-translate-y-1 me-2 ps-1 hover:scale-110 hover:bg-red-500 duration-300"><IconCarrito /></button>
+  */}
           </div>
 
         </nav>
