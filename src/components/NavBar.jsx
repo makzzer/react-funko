@@ -14,8 +14,8 @@ const NavBar = () => {
       </div>
 
       {/*div con el navbar*/}
-      <div className="flex ml-auto">
-        <nav className="bg-gray-900 py-4 px-4 flex justify-around">
+      <div className="flex justify-start md:ml-auto">
+        <nav className="bg-gray-900 py-2 px-4 flex justify-around">
 
           <div className="md:flex md:mx-auto ">
             <a
