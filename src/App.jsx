@@ -28,7 +28,9 @@ const App = () => {
 
   return (
     <>
+    
       <Home elementosLanding={elementosLanding}/>
+      
     </>
   );
 };

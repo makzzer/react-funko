@@ -2,6 +2,9 @@ import IconLogotipoSimple from "./icons/IconLogotipoSimple"
 
 const Footer = () => {
     return (
+        <div className="container max-w-[120rem]">
+
+
         <footer className="bg-gray-900 py-4 px-4 text-white">
 
             {/*div con 2 elem: navbar y logo*/}
@@ -63,6 +66,7 @@ const Footer = () => {
             </div>
 
         </footer>
+        </div>
     )
 }
 
