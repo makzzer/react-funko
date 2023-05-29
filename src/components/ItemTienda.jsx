@@ -21,7 +21,7 @@ const ItemTienda = ({ id, title, description, img }) => {
 
         </article>
 
-        <div className="flex flex-col mt-4 md:mt-0">
+        <div className="flex flex-col mt-4 md:mt-0 max-w-lg">
           <img
             className="w-full px-auto"
             src={img}

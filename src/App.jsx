@@ -1,4 +1,5 @@
 import Home from "./pages/Home";
+import ListaLanzamientos from "./components/ListaLanzamientos"
 
 export const elementosLanding = [
   {
@@ -30,6 +31,8 @@ const App = () => {
     <>
     
       <Home elementosLanding={elementosLanding}/>
+      
+      
       
     </>
   );
