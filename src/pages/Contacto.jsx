@@ -1,6 +1,6 @@
 const Contacto = () => {
     return (
-        <h1>CONTACTO</h1>
+        <h1 className="text-center">CONTACTO</h1>
     )
 }
 

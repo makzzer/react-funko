@@ -1,6 +1,6 @@
 const Ingresar = () =>{
     return (
-        <h1>INGRESAR</h1>
+        <h1 className="text-center">INGRESAR</h1>
     )
 }
 
