@@ -4,6 +4,7 @@ import NotFound from "../pages/NotFound"
 import Shop from "../pages/Shop"
 import Ingresar from "../pages/Ingresar"
 import Contacto from "../pages/Contacto"
+//importo el array que le paso como prop al Home, sino no funciona
 import {elementosLanding} from "../App"
 
 import Home2 from "../pages/Home2"
