@@ -3,8 +3,11 @@ import ListaItemsTienda from "../components/ListaItemsTienda";
 import Branding from "../Branding";
 import { useState } from "react";
 
-const Home = ({ elementosLanding }) => {
+const Home = ({ elementosLanding, nuevosLanzamientos }) => {
   const [elementosLand, SetElem] = useState(elementosLanding);
+
+  const [ultimosLanzamientos, setNewLanz] = useState(nuevosLanzamientos);
+
   return (
     <>
       <div className="container max-w-[120rem]">
@@ -16,9 +19,22 @@ const Home = ({ elementosLanding }) => {
 
         <main className="container max-w-[120rem] flex flex-col">
           <ListaItemsTienda elementosLand={elementosLand} />
-          
 
-          <ListaLanzamientos />
+          <div className="container max-w-[120rem] ml-auto flex md:flex-row flex-col  justify-around">
+            <h1
+              className="py-4 md:text-start
+            uppercase flex md:mx-none
+            mx-auto text-5xl text-center
+            md:text-6xl font-semibold"
+            >
+              últimos lanzamientos
+            </h1>
+
+            <div className="flex flex-col container max-w-[120rem] mx-auto p-4">
+              <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
+            </div>
+
+          </div>
         </main>
       </div>
     </>

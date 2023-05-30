@@ -8,7 +8,11 @@ const ListaItemsTienda = ({elementosLand}) => {
         <>
         {
             elementosLand.map ( elem => (
-                <ItemTienda key={elem.id} title={elem.title} description={elem.description} img={elem.img} id={elem.id}/>
+                <ItemTienda key={elem.id}
+                 title={elem.title}
+                  description={elem.description}
+                   img={elem.img}
+                    id={elem.id}/>
             ))
         }
         </>

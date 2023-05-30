@@ -5,9 +5,8 @@ import Shop from "../pages/Shop";
 import Ingresar from "../pages/Ingresar";
 import Contacto from "../pages/Contacto";
 //importo el array que le paso como prop al Home, sino no funciona
-import { elementosLanding } from "../App";
+import { elementosLanding, nuevosLanzamientos } from "../App";
 import DefaultLayout from "../layouts/DefaultLayout";
-import { Children } from "react";
 
 //voy a usar un layout y dentro de ese layout un objeto con todas las paginas como main del layout, eso lo hago con <Outlet/>
 
@@ -19,7 +18,12 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home elementosLanding={elementosLanding} />,
+        element: (
+          <Home
+            elementosLanding={elementosLanding}
+            nuevosLanzamientos={nuevosLanzamientos}
+          />
+        ),
       },
       {
         path: "/shop",
