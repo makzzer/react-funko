@@ -20,17 +20,18 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
         <main className="container max-w-[120rem] flex flex-col">
           <ListaItemsTienda elementosLand={elementosLand} />
 
-          <div className="container max-w-[120rem] ml-auto flex md:flex-row flex-col  justify-around">
+          <div className="container max-w-[120rem] ml-auto flex flex-col">
+
             <h1
               className="py-4 md:text-start
             uppercase flex md:mx-none
             mx-auto text-5xl text-center
-            md:text-6xl font-semibold"
+            md:text-6xl font-semibold md:me-auto"
             >
               últimos lanzamientos
             </h1>
 
-            <div className="flex flex-col container max-w-[120rem] mx-auto p-4">
+            <div className="flex flex-col md:flex-row container max-w-[120rem] mx-auto p-4">
               <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
             </div>
 

@@ -8,10 +8,11 @@ const ItemLanzamiento = ({
   tag1,
   tag2,
 }) => {
+  
   console.log(tag1, tag1);
   return (
     <>
-      {/*IronMan 1 */}
+      {/*Item Lanzamiento template*/}
       <div className="uppercase max-w-xs rounded overflow-hidden shadow-lg mx-auto mb-2 flex flex-col">
         <div className="flex justify-end">
           <span className="inline-block bg-red-600 px-2 text-white rounded">

@@ -30,8 +30,8 @@ export const nuevosLanzamientos = [
     title: "Iron Man",
     subTitle: "Iron Man",
     img: "https://i5.walmartimages.com/asr/33fb6837-0de6-4940-a946-67762e862fa9_1.ebd0709f03d53a1283b55731b68068a5.png",
-    precio: 4200.0,
-    cuotas: "3 cuotas sin interés",
+    precio: 5000,
+    cuotas: "12 cuotas sin interés",
     tag1: "AVENGERS",
     tag2: "TONY STARK",
   },
@@ -42,7 +42,7 @@ export const nuevosLanzamientos = [
     subTitle: "star wars",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 4200.0,
-    cuotas: "3 cuotas sin interés",
+    cuotas: "6 cuotas sin interés",
     tag1: "imperio",
     tag2: "destructor",
   },
@@ -52,7 +52,7 @@ export const nuevosLanzamientos = [
     title: "voldemort",
     subTitle: "harry potter",
     img: "https://funko.com/dw/image/v2/BGTS_PRD/on/demandware.static/-/Sites-funko-master-catalog/default/dwd6b70a49/images/funko/5861-1.png?sw=346&sh=346",
-    precio: 4200.0,
+    precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
     tag2: "avada kedabra",
@@ -64,4 +64,4 @@ const App = () => {
 };
 
 //tengo que exportar así porque no me dejaba con mas de una export nombrada y una directa,  sino falla !!
-export default { App, elementosLanding, nuevosLanzamientos} ;
+export default { App, elementosLanding, nuevosLanzamientos };
