@@ -135,14 +135,14 @@ const NavBar = () => {
           <div
             className={`${
               barraAbierta ? "block" : "hidden"
-            }  flex flex-col mx-auto items-start px-4 ease-in-out transition-all`}
+            } flex flex-col mx-auto items-start px-4 ease-in-out transition-all`}
           >
-            <hr className="border-1 min-w-full border-red-500 mb-2 mt-4 " />
+            <hr className="border-1 min-w-full border-red-500 mb-2 mt-4" />
 
             <NavLink
               to="/shop"
               href=""
-              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-red-500"
             >
               Shop
             </NavLink>
@@ -150,7 +150,7 @@ const NavBar = () => {
             <NavLink
               to="/contacto"
               href=""
-              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-red-500"
             >
               Contacto
             </NavLink>
@@ -158,7 +158,7 @@ const NavBar = () => {
             <NavLink
               to="/ingresar"
               href=""
-              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-red-500"
             >
               Ingresar
             </NavLink>
