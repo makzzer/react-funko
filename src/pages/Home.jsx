@@ -1,6 +1,6 @@
 import ListaLanzamientos from "../components/ListaLanzamientos";
 import ListaItemsTienda from "../components/ListaItemsTienda";
-import Branding from "../Branding";
+import Branding from "../components/Branding";
 import { useState } from "react";
 
 const Home = ({ elementosLanding, nuevosLanzamientos }) => {
@@ -21,7 +21,6 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
           <ListaItemsTienda elementosLand={elementosLand} />
 
           <div className="container max-w-[120rem] ml-auto flex flex-col">
-
             <h1
               className="py-4 md:text-start
             uppercase flex md:mx-none
@@ -34,7 +33,6 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
             <div className="flex flex-col md:flex-row container max-w-[120rem] mx-auto p-4">
               <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
             </div>
-
           </div>
         </main>
       </div>
