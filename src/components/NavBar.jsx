@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <>
       {/*primero creo el navbar*/}
-      <nav className="bg-gray-900 p-6 ">
+      <nav className="bg-gray-900 p-4 md:p-6 ">
         {/*div para controlar el ancho total del que se va a mostrar el contenido*/}
         <div
           className={`${
@@ -29,7 +29,7 @@ const NavBar = () => {
           } max-w-[120rem] mx-auto `}
         >
           {/*creo contenedor flex*/}
-          <div className=" items-center justify-between mx-auto flex flex-row">
+          <div className=" items-center md:justify-between mx-auto flex flex-row">
             {/*la siguiente linea es para qe la imagen siempre tenga el mismo tamaño voy a usar una mas pequeña para el responsive*/}
 
             <NavLink
@@ -132,11 +132,14 @@ const NavBar = () => {
           </div>
 
           {/*menu responsive*/}
-          <div className={`${barraAbierta ? "block" : "hidden"} flex flex-col`}>
+          <div className={`${barraAbierta ? "block" : "hidden"} transition-all duration-300 flex flex-col mx-auto items-start px-4`}>
+            
+            <hr className="border-1 min-w-full border-red-500 mb-2 mt-4 "/>
+
             <NavLink
               to="/shop"
               href=""
-              className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
             >
               Shop
             </NavLink>
@@ -144,7 +147,7 @@ const NavBar = () => {
             <NavLink
               to="/contacto"
               href=""
-              className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
             >
               Contacto
             </NavLink>
@@ -152,12 +155,12 @@ const NavBar = () => {
             <NavLink
               to="/ingresar"
               href=""
-              className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
+              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
             >
               Ingresar
             </NavLink>
 
-            <button className="hover:-translate-y-1 ps-1 hover:scale-110 hover:bg-red-500 duration-300">
+            <button className="ps-3 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300">
               <IconCarrito />
             </button>
           </div>
