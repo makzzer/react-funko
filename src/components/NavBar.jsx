@@ -96,7 +96,7 @@ const NavBar = () => {
             {/*acá voy a crear el menú de navegación*/}
             <div
               className={`${
-                barraAbierta ? "block" : "hidden"
+                barraAbierta ? "hidden" : "block"
               } flex flex-row justify-between}`}
             >
               <div className="hidden md:block">
@@ -132,7 +132,7 @@ const NavBar = () => {
           </div>
 
           {/*menu responsive*/}
-          <div className={`${barraAbierta ? "hidden" : "block"} flex flex-col`}>
+          <div className={`${barraAbierta ? "block" : "hidden"} flex flex-col`}>
             <NavLink
               to="/shop"
               href=""
@@ -157,7 +157,7 @@ const NavBar = () => {
               Ingresar
             </NavLink>
 
-            <button className="hover:-translate-y-1 me-2 ps-1 hover:scale-110 hover:bg-red-500 duration-300">
+            <button className="hover:-translate-y-1 ps-1 hover:scale-110 hover:bg-red-500 duration-300">
               <IconCarrito />
             </button>
           </div>
