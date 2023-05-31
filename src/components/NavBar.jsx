@@ -26,7 +26,7 @@ const NavBar = () => {
         <div
           className={`${
             barraAbierta ? "h-auto" : "h - 16"
-          } max-w-[120rem] mx-auto `}
+          } max-w-[120rem] mx-auto ease-in-out transition-all `}
         >
           {/*creo contenedor flex*/}
           <div className=" items-center md:justify-between mx-auto flex flex-row">
@@ -45,7 +45,7 @@ const NavBar = () => {
               className="md:hidden block flex-shrink-0 transition delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-none duration-300"
               href="/blog"
             >
-              <IconLogo ancho={300} alto={44} />
+              <IconLogo ancho={300} alto={48} />
             </NavLink>
 
             {/*ahora voy a crear el div con el menu desplegable pero por defecto en md está hidden*/}
@@ -132,9 +132,12 @@ const NavBar = () => {
           </div>
 
           {/*menu responsive*/}
-          <div className={`${barraAbierta ? "block" : "hidden"} transition-all duration-300 flex flex-col mx-auto items-start px-4`}>
-            
-            <hr className="border-1 min-w-full border-red-500 mb-2 mt-4 "/>
+          <div
+            className={`${
+              barraAbierta ? "block" : "hidden"
+            }  flex flex-col mx-auto items-start px-4 ease-in-out transition-all`}
+          >
+            <hr className="border-1 min-w-full border-red-500 mb-2 mt-4 " />
 
             <NavLink
               to="/shop"
