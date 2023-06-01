@@ -82,7 +82,7 @@ const Nav = () => {
 
           <div>
             <ul
-              className={`md:flex md:items-center md:pb-0  absolute md:static pb-1 bg-gray-900 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all pt-1 duration-500 ease-in ${
+              className={`md:flex md:items-center md:pb-0  absolute md:static pb-1 bg-gray-900 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all pt-3 duration-500 ease-in ${
                 open ? "top-20 " : "top-[-490px]"
               }`}
             >
