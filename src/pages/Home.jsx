@@ -31,7 +31,7 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
               últimos lanzamientos
             </h1>
 
-          <div className="flex md:flex-row flex-col bg-green-400 container justify-between max-w-6xl">
+          <div className="flex md:flex-row flex-col  container justify-between max-w-6xl">
               <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
           
           </div>
