@@ -1,176 +1,92 @@
+import { useState } from "react";
 import IconLogo from "./icons/IconLogo";
 import IconCarrito from "./icons/IconCarrito";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
 
-const NavBar = () => {
-  //hacer barra responsive
-  //1° setear un estado isOpen en false para ver si la barra esta abierta
+const Nav = () => {
 
-  const [barraAbierta, setBarraAbierta] = useState(false);
 
-  const cerrarBarra = () => {
-    setBarraAbierta(!barraAbierta);
-  };
+  let navlinks = [
+    {
+      name: "SHOP",
+      to: "/shop",
+      classname:
+      "md:ml-6 text-gray-300 py-2 px-3 md:my-0 my-3 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300",
+    },
+    {
+      name: "CONTACTO",
+      to: "/contacto",
+      classname:
+        "md:ml-4 text-gray-300 py-2 px-3 md:my-0 my-3 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300",
+    },
+    {
+      name: "INGRESAR",
+      to: "/ingresar",
+      classname:
+        "md:ml-4 text-gray-300 py-2 px-3 md:my-0 my-3 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300",
+    },
+    {
+      name: "CART",
+      to: "/ingresar",
+      classname:
+        "md:ml-4 text-gray-300 py-2 px-3 md:my-0 my-3 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300",
+    },
+  ];
 
-  //2) creo el state del menú desplegable
-  const menuDesplegable = () => {
-    setBarraAbierta(!barraAbierta);
-  };
+  let [open, setOpen] = useState(true);
 
   return (
     <>
-      {/*primero creo el navbar*/}
-      <nav className="bg-gray-900 p-4 md:p-6 ">
-        {/*div para controlar el ancho total del que se va a mostrar el contenido*/}
-        <div
-          className={`${
-            barraAbierta ? "h-auto" : "h - 16"
-          } max-w-[120rem] mx-auto ease-in-out transition-all `}
-        >
-          {/*creo contenedor flex*/}
-          <div className=" items-center md:justify-between mx-auto flex flex-row">
-            {/*la siguiente linea es para qe la imagen siempre tenga el mismo tamaño voy a usar una mas pequeña para el responsive*/}
+      {/**creo el contendor principal donde coloco fixed para que la barra quede pegada cuando scrolleo"*/}
+      <div className="bg-gray-900 shadow-md w-full fixed top-0 left-0  ">
 
-            <NavLink
-              to={"/"}
-              className="hidden md:block flex-shrink-0 transition delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-none duration-300"
-              href="/blog"
-            >
-              <IconLogo ancho={500} alto={80} />
-            </NavLink>
+        {/**creo otro div  que va a contener por un lado al logo, al boton para ampliar y a los links"*/}
+        <div className="mx-auto ps-6 md:flex items-center container justify-between  bg-gray-900 py-4 md:px-10 px-2 ">
+          {/**Div con el logo  */}
 
-            <NavLink
-              to={"/"}
-              className="md:hidden block flex-shrink-0 transition delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-none duration-300"
-              href="/blog"
-            >
-              <IconLogo ancho={300} alto={48} />
-            </NavLink>
-
-            {/*ahora voy a crear el div con el menu desplegable pero por defecto en md está hidden*/}
-            <div className="items-start  flex mr-2 md:hidden">
-              <button
-                onClick={cerrarBarra}
-                type="button"
-                className="justify-center p-2 rounded-md 
-				  text-gray-400 hover:text-white 
-				  hover:bg-gray-700 focus:outline-none
-				  focus:bg-gray-700 
-				  focus:text-white"
-              >
-                {/*creo el svg del icono*/}
-                <svg
-                  className={`${barraAbierta ? "hidden" : "block"} h-6 w-6`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-                <svg
-                  className={`${barraAbierta ? "block" : "hidden"} h-6 w-6`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            {/*acá voy a crear el menú de navegación*/}
-            <div
-              className={`${
-                barraAbierta ? "hidden" : "block"
-              } flex flex-row justify-between}`}
-            >
-              <div className="hidden md:block">
-                <NavLink
-                  to="/shop"
-                  href=""
-                  className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
-                >
-                  Shop
-                </NavLink>
-
-                <NavLink
-                  to="/contacto"
-                  href=""
-                  className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
-                >
-                  Contacto
-                </NavLink>
-
-                <NavLink
-                  to="/ingresar"
-                  href=""
-                  className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300"
-                >
-                  Ingresar
-                </NavLink>
-
-                <button className="hover:-translate-y-1 me-2 ps-1 hover:scale-110 hover:bg-red-500 duration-300">
-                  <IconCarrito />
-                </button>
-              </div>
-            </div>
+          <div className=" mr-2 pt-2">
+            <IconLogo ancho={333} alto={80} />
           </div>
 
-          {/*menu responsive*/}
           <div
-            className={`${
-              barraAbierta ? "block" : "hidden"
-            } flex flex-col mx-auto items-start px-4 ease-in-out transition-all`}
+            onClick={() => setOpen(!open)}
+            className="text-3xl absolute right-1 top-12 cursor-pointer ps-2  md:hidden"
           >
-            <hr className="border-1 min-w-full border-red-500 mb-2 mt-4" />
-
-            <NavLink
-              to="/shop"
-              href=""
-              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-red-500"
-            >
-              Shop
-            </NavLink>
-
-            <NavLink
-              to="/contacto"
-              href=""
-              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-red-500"
-            >
-              Contacto
-            </NavLink>
-
-            <NavLink
-              to="/ingresar"
-              href=""
-              className="text-gray-300 px-3 py-2 rounded-md text-xl font-medium transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-red-500"
-            >
-              Ingresar
-            </NavLink>
-
-            <button className="ps-3 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300">
-              <IconCarrito />
-            </button>
+            <ion-icon name={open ? "close" : "menu"}></ion-icon>
           </div>
+
+          <ul
+            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-gray-900 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+              open ? "top-20 " : "top-[-490px]"
+            }`}
+          >
+            {navlinks.map((navlink) => {
+              return (
+                <>
+                
+                {
+                  <hr className="md:hidden border-1 min-w-full border-red-500 mb-2 mt-4" />
+                }
+              
+
+                <li key={navlink.name} className="text-xl md:my-0 my-7">
+                  <NavLink to={navlink.to} className={navlink.classname}>
+                    {navlink.name}
+                  </NavLink>
+                </li>
+                </>
+              );
+            })}
+          </ul>
+
+
+
+
+
         </div>
-      </nav>
+      </div>
     </>
   );
 };
 
-export default NavBar;
+export default Nav;
