@@ -5,16 +5,18 @@ import { Outlet } from "react-router-dom";
 const DefaultLayout = () => {
   return (
     <>
-      <div className="container max-w-6xl mx-auto">
-        <header className="bg-gray-900">
+      <div className="">
+        <header>
           <NavBar />
         </header>
 
-        <main>
-            <Outlet/>
+        <main className="container max-w-6xl mx-auto">
+          <Outlet />
         </main>
 
-        <Footer />
+        <div className="">
+          <Footer />
+        </div>
       </div>
     </>
   );

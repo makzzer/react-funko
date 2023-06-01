@@ -6,7 +6,7 @@ const ListaItemsTienda = ({ elementosLand }) => {
     <>
       {elementosLand.map((elem) => (
         <>
-        <div className="md:py-1 max-w-6xl mx-auto md:flex items-center container justify-between  bg-gray-900  md:px-10 px-2">
+        <div className="md:py-1 max-w-6xl mx-auto md:flex items-center container justify-between  md:px-10 px-2">
           <ItemTienda
             key={elem.id}
             title={elem.title}

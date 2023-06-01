@@ -2,13 +2,13 @@ import IconLogotipoSimple from "./icons/IconLogotipoSimple"
 
 const Footer = () => {
     return (
-        <div className="container max-w-6xl mx-auto">
+        <div className="bg-gray-900 shadow-md relative mx-auto py-2 md:pb-4 bottom-0 left-0 w-full h-full">
 
 
-        <footer className="bg-gray-900 py-4 px-4 text-white">
+        <footer className="bg-gray-900 py-2 px-4 text-white container max-w-6xl mx-auto">
 
             {/*div con 2 elem: navbar y logo*/}
-            <div className="flex flex-row container mx-auto max-w-screen-2xl">
+            <div className="flex flex-row container mx-auto max-w-screen-2xl py-2">
 
                 {/*div con navbar*/}
                 <div className="flex justify-start">

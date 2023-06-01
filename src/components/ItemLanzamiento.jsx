@@ -20,7 +20,7 @@ const ItemLanzamiento = ({
           </span>
         </div>
         <img
-          className="w-full relative"
+          className="w-full"
           src={img}
           alt="Imagen de la card"
         ></img>

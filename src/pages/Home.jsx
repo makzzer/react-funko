@@ -10,10 +10,9 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
 
   return (
     <>
-      <div className="md:py-1 max-w-6xl mx-auto md:flex md:flex-col items-center container justify-between  bg-gray-900  md:px-10 px-2 ">
-        
-        <div className="w-screen md:mb-0 mb-8 h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
-          <div className="max-w-6xl mx-auto h-full md:mt-2 ">
+      <div className="md:py-1 max-w-6xl mx-auto md:flex md:flex-col items-center container justify-between md:px-10 ">
+        <div className="md:mb-0 w-screen mb-8 h-[50vh] bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
+          <div className="max-w-6xl mx-auto h-full md:mt-2 mt-16 ">
             <Branding />
           </div>
         </div>
@@ -22,18 +21,17 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
           <ListaItemsTienda elementosLand={elementosLand} />
 
           <h1
-              className="py-4
+            className="py-4
             uppercase md:mx-none
             text-5xl 
             md:text-6xl font-semibold
-            text-center md:text-start"
-            >
-              últimos lanzamientos
-            </h1>
+            text-center md:text-start mb-6"
+          >
+            últimos lanzamientos
+          </h1>
 
           <div className="flex md:flex-row flex-col  container justify-between max-w-6xl">
-              <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
-          
+            <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
           </div>
         </main>
       </div>
