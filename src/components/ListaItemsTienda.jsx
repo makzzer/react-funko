@@ -1,22 +1,24 @@
-import ItemTienda from "./ItemTienda"
+import ItemTienda from "./ItemTienda";
 
-
-
-const ListaItemsTienda = ({elementosLand}) => { 
-    console.log(elementosLand)
-    return (
+const ListaItemsTienda = ({ elementosLand }) => {
+  console.log(elementosLand);
+  return (
+    <>
+      {elementosLand.map((elem) => (
         <>
-        {
-            elementosLand.map ( elem => (
-                <ItemTienda key={elem.id}
-                 title={elem.title}
-                  description={elem.description}
-                   img={elem.img}
-                    id={elem.id}/>
-            ))
-        }
+        <div className="md:py-1 max-w-6xl mx-auto md:flex items-center container justify-between  bg-gray-900  md:px-10 px-2">
+          <ItemTienda
+            key={elem.id}
+            title={elem.title}
+            description={elem.description}
+            img={elem.img}
+            id={elem.id}
+          />
+          </div>
         </>
-    )
- }
+      ))}
+    </>
+  );
+};
 
- export default ListaItemsTienda;
+export default ListaItemsTienda;

@@ -10,29 +10,30 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
 
   return (
     <>
-      <div className="container max-w-[120rem] ">
-        <div className="md:mb-0 mb-8 h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
-          <div className="container mx-auto h-full md:mt-2 pt-14 ">
+      <div className="md:py-1 max-w-6xl mx-auto md:flex md:flex-col items-center container justify-between  bg-gray-900  md:px-10 px-2 ">
+        
+        <div className="w-screen md:mb-0 mb-8 h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
+          <div className="max-w-6xl mx-auto h-full md:mt-2 ">
             <Branding />
           </div>
         </div>
 
-        <main className="container max-w-[120rem] flex flex-col">
+        <main className="container flex flex-col">
           <ListaItemsTienda elementosLand={elementosLand} />
 
-          <div className="container max-w-[120rem] ml-auto flex flex-col">
-            <h1
-              className="py-4 md:text-start
-            uppercase flex md:mx-none
-            mx-auto text-5xl text-center
-            md:text-6xl font-semibold md:me-auto"
+          <h1
+              className="py-4
+            uppercase md:mx-none
+            text-5xl 
+            md:text-6xl font-semibold
+            text-center md:text-start"
             >
               últimos lanzamientos
             </h1>
 
-            <div className="flex flex-col md:flex-row container max-w-[120rem] mx-auto p-4">
+          <div className="flex md:flex-row flex-col bg-green-400 container justify-between max-w-6xl">
               <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
-            </div>
+          
           </div>
         </main>
       </div>

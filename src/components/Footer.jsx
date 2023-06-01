@@ -2,7 +2,7 @@ import IconLogotipoSimple from "./icons/IconLogotipoSimple"
 
 const Footer = () => {
     return (
-        <div className="container max-w-[120rem]">
+        <div className="container max-w-6xl mx-auto">
 
 
         <footer className="bg-gray-900 py-4 px-4 text-white">

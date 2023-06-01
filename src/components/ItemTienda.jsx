@@ -1,9 +1,11 @@
 const ItemTienda = ({ id, title, description, img }) => {
   return (
     <>
-      <div className="flex flex-col items-center mb-1 px-auto mx-auto container md:flex-row max-w-screen-2xl">
-        {/*oojo que por acá tenia un md:ml-4*/}
-        <article className="flex flex-col md:text-start text-center mx-auto ">
+    {/*div para ubicar contenido del item*/}
+      <div className="flex flex-col items-center mb-1 px-auto container md:flex-row">
+       
+
+        <article className="flex flex-col md:text-start text-center">
           <h3 className="text-gray-800 text-4xl mb-4 whitespace-pre-line">
             {title}
           </h3>

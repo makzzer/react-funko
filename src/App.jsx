@@ -12,7 +12,7 @@ export const elementosLanding = [
   {
     id: 2,
     title: "POKEMÓN INDIGO",
-    img: "https://cdn.shopify.com/s/files/1/0643/0451/3264/products/Pop_Pikachu_hi-res.png?v=1680199544",
+    img: "https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/7O7TOQHZL5DWXJDDAGMCSEBIUE.png",
     description:
       "Atrapa todos los que puedas y disfruta de una colección llena de amigos.",
   },
