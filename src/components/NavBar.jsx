@@ -63,7 +63,7 @@ const Nav = () => {
                 className="mr-2 pt-2 transition-all duration-500 ease-in-out"
                 to="/"
               >
-                <IconLogo ancho={180} alto={80} />
+                <IconLogo ancho={200} alto={80} />
               </NavLink>
             </>
           ) : (
