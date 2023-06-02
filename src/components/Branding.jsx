@@ -5,7 +5,7 @@ const Branding = () => {
          items-center md:items-start 
          justify-center h-full py-auto
           px-auto container mx-auto 
-          max-w-[90rem] pt-10">
+          max-w-[90rem] pt-8">
 
             <h1 className="text-white text-4xl mb-2">Nuevos ingresos</h1>
             <h2 className="text-white text-center text-2xl mb-2">
