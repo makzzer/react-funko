@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const DefaultLayout = () => {
   return (
     <>
-      <div className="">
+      <div className="pt-10">
         <header>
           <NavBar />
         </header>
