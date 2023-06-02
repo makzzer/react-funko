@@ -39,7 +39,7 @@ const Nav = () => {
   //acá detecto si estoy en pantalla mobile o desktop
   useEffect(() => {
     const handleResize = () => {
-      setEsPantallaMobile(window.innerWidth < 640); // Ajusta el tamaño según tus necesidades
+      setEsPantallaMobile(window.innerWidth <= 740); // Ajusta el tamaño según tus necesidades
     };
 
     window.addEventListener("resize", handleResize);
@@ -60,7 +60,7 @@ const Nav = () => {
           {esPantallaMobile ? (
             <>
               <NavLink
-                className="mr-2 pt-2 transition-all duration-500 ease-in-out"
+                className="mr-2 pt-2"
                 to="/"
               >
                 <IconLogo ancho={200} alto={80} />
