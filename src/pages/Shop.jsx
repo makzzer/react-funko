@@ -38,8 +38,8 @@ const Shop = () => {
           </div>
         </div>
 
-        <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="pb-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <div className="bg-pink-500 border-black border-2">01</div>
             <div className="bg-blue-500 border-black border-2">02</div>
             <div className="bg-pink-500 border-black border-2">01</div>
