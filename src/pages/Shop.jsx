@@ -19,7 +19,7 @@ const Shop = () => {
             </form>
           </div>
 
-          <div className="flex md:flex-row flex-col items-center text-lg ps-4">
+          <div className="mb-2 flex md:flex-row flex-col items-center text-lg ps-4">
             <label
               htmlFor="select"
               className="text-gray-700 font-semibold mt-2 me-1 mb-2"
