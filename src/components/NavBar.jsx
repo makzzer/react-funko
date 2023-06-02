@@ -6,31 +6,30 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   const [esPantallaMobile, setEsPantallaMobile] = useState(false);
 
-  //links de navegacion configurados en recorrer map, genera un li y dentro un NavLink
+  const clasesita =
+    "md:ml-0 text-gray-300 py-2 px-0 md:my-0 my-3 md:px-2 rounded-md md:text-xl text-lg font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300";
+  
+    //links de navegacion configurados en recorrer map, genera un li y dentro un NavLink
   let navlinks = [
     {
       name: "SHOP",
       to: "/shop",
-      classname:
-        "md:ml-0 text-gray-300 py-2 px-0 md:my-0 my-3 md:px-2 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300",
+      classname: clasesita ,
     },
     {
       name: "CONTACTO",
       to: "/contacto",
-      classname:
-        "md:ml-0 text-gray-300 py-2 px-0 md:my-0 md:px-2 my-3 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300",
+      classname:  clasesita ,
     },
     {
       name: "INGRESAR",
       to: "/ingresar",
-      classname:
-        "md:ml-0 text-gray-300 py-2 px-0 md:my-0 my-3 md:px-2 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300",
+      classname: clasesita ,
     },
     {
       name: "CART",
       to: "/ingresar",
-      classname:
-      "md:ml-0 text-gray-300 py-2 px-0 md:my-0 my-3 md:px-2 rounded-md text-xl font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300",
+      classname: clasesita,
     },
   ];
 
@@ -53,16 +52,18 @@ const Nav = () => {
 
   return (
     <>
-      {/**creo el contendor principal donde coloco fixed para que la barra quede pegada cuando scrolleo"*/}
-      <div className="bg-gray-900 shadow-md fixed mx-auto pt-4 pb-0 md:py-2 md:pb-4 top-0 w-full left-0">
-        
+      {/**creo el contendor principal donde coloco fixed para que la barra quede pegada cuando scrolleo, le saco fixed por ahora"*/}
+      <div className="bg-gray-900 shadow-md fixed mx-auto pt-1 md:pt-4 pb-0 md:py-2 md:pb-4 top-0  w-full left-0">
         {/**creo otro div  que va a contener por un lado al logo, al boton para ampliar y a los links"*/}
-        <div className=" max-w-6xl md:py-1 mx-auto md:flex items-center justify-between bg-gray-900 px-2">
+        <div className="px-10 h-[4rem] md:h-auto bg-gray-900 mb-1 justify-between max-w-6xl md:py-1 mx-auto md:flex items-center ">
           {/**Div con el logo  */}
           {esPantallaMobile ? (
             <>
-              <NavLink className="mr-2 pt-2 transition-all duration-500 ease-in-out" to="/">
-                <IconLogo ancho={280} alto={80} />
+              <NavLink
+                className="mr-2 pt-2 transition-all duration-500 ease-in-out"
+                to="/"
+              >
+                <IconLogo ancho={180} alto={80} />
               </NavLink>
             </>
           ) : (
@@ -75,15 +76,15 @@ const Nav = () => {
 
           <div
             onClick={() => setOpen(!open)}
-            className="text-3xl absolute right-4 top-10 cursor-pointer ps-2 md:hidden"
+            className="text-3xl gap-4 absolute right-12 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
           >
             <ion-icon name={open ? "close" : "menu"}></ion-icon>
           </div>
 
           <div>
             <ul
-              className={`md:flex md:items-center md:pb-0  absolute md:static pb-1 bg-gray-900 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all pt-3 duration-500 ease-in ${
-                open ? "top-20 " : "top-[-490px]"
+              className={` md:flex md:items-center md:pb-0 absolute md:static pb-1 bg-gray-900 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-11 transition-all pt-0  duration-500 ease-in ${
+                open ? "top-14 " : "top-[-490px]"
               }`}
             >
               {navlinks.map((navlink) => {
@@ -102,8 +103,6 @@ const Nav = () => {
               })}
             </ul>
           </div>
-
-
         </div>
       </div>
     </>
