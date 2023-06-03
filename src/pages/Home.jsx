@@ -25,7 +25,7 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
             uppercase md:mx-none
             text-5xl 
             md:text-6xl md:pl-10 font-semibold
-            text-center md:text-start mb-6"
+            text-center md:text-start mb-6 "
           >
             últimos lanzamientos
           </h1>
