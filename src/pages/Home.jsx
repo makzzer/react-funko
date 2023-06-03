@@ -24,7 +24,7 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
             className="py-4
             uppercase md:mx-none
             text-5xl 
-            md:text-6xl font-semibold
+            md:text-6xl md:pl-10 font-semibold
             text-center md:text-start mb-6"
           >
             últimos lanzamientos
