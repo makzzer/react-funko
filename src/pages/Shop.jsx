@@ -1,8 +1,10 @@
-const Shop = () => {
+import ListaGrid from "../components/ListaGrid";
+
+const Shop = ({ grillaShop }) => {
   return (
     <>
       {/*este es el div del container general*/}
-      <div className=" min-h-screen max-w-6xl text-center container text-4xl mt-10 flex flex-col">
+      <div className=" min-h-screen max-w-6xl text-center container text-4xl mt-10 md:mt-20 flex flex-col">
         <h1 className="text-6xl mb-4 text-center pt-20 mt-2">Shop</h1>
         {/*div flex col que contiene  barra y filtros*/}
 
@@ -39,27 +41,8 @@ const Shop = () => {
         </div>
 
         <div className="pb-2">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
-            <div className="bg-pink-500 border-black border-2">01</div>
-            <div className="bg-blue-500 border-black border-2">02</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mt-12">
+            <ListaGrid grillaShop={grillaShop} />
           </div>
         </div>
       </div>

@@ -51,7 +51,7 @@ export const nuevosLanzamientos = [
     id: 3,
     title: "voldemort",
     subTitle: "harry potter",
-    img: "/multimedia_ funkoshop/multimedia/harry-potter/hermione-1.webp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
@@ -85,12 +85,12 @@ export const grillaShop = [
   {
     id: 3,
     title: "voldemort",
-    subTitle: "harry potter",
-    img: "/multimedia_ funkoshop/multimedia/harry-potter/hermione-1.webp",
+    subTitle: "HP",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
-    tag2: "avada kedabra",
+    tag2: "slitherin",
   },
   {
     id: 4,
@@ -117,20 +117,42 @@ export const grillaShop = [
   {
     id: 6,
     title: "voldemort",
-    subTitle: "harry potter",
-    img: "/multimedia_ funkoshop/multimedia/harry-potter/hermione-1.webp",
+    subTitle: "hp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
-    tag2: "avada kedabra",
+    tag2: "slitherin",
+  },
+  {
+    id: 7,
+    title: "voldemort",
+    subTitle: "hp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
+    precio: 8000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "tom riddle",
+    tag2: "slitherin",
+  },
+  {
+    id: 8,
+    title: "voldemort",
+    subTitle: "hp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
+    precio: 8000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "tom riddle",
+    tag2: "slitherin",
   },
 ];
 
-
+{
+  /* img: "/multimedia_ funkoshop/multimedia/harry-potter/hermione-1.webp",*/
+}
 
 const App = () => {
   return <></>;
 };
 
 //tengo que exportar así porque no me dejaba con mas de una export nombrada y una directa,  sino falla !!
-export default { App, elementosLanding, nuevosLanzamientos };
+export default { App, elementosLanding, nuevosLanzamientos,grillaShop };
