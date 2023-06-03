@@ -41,7 +41,7 @@ const Shop = ({ grillaShop }) => {
         </div>
 
         <div className="pb-2">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mt-12">
             <ListaGrid grillaShop={grillaShop} />
           </div>
         </div>
