@@ -10,7 +10,7 @@ const ItemTienda = ({ id, title, description, img }) => {
             {title}
           </h3>
           <p className="text-gray-800 text-2xl mb-4">{description}</p>
-          <div className="border-2 border-red-500 mb-4 max-w-xl mx-4 md:mx-0">
+          <div className="border-2 md:min-w-[29rem] border-red-500 mb-4 max-w-6xl mx-4 md:mx-0">
             {" "}
           </div>
           <div className="flex justify-center md:justify-start">

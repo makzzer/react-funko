@@ -5,13 +5,13 @@ const Shop = ({ grillaShop }) => {
     <>
       {/*este es el div del container general*/}
       <div className=" min-h-screen max-w-6xl text-center container text-4xl mt-10 md:mt-20 flex flex-col">
-        <h1 className="md:text-8xl text-6xl mb-12 text-center pt-20 mt-2 font-sans">
+        <h1 className="md:text-8xl text-6xl mb-10 text-center pt-20 mt-2 font-sans">
           Shop
         </h1>
         {/*div flex col que contiene  barra y filtros*/}
 
-        <div className="md:flex-row flex-col md:flex items-center justify-between mb-10">
-          <div className="flex items-center mb-1 md:mb-3 justify-between px-1">
+        <div className="md:flex-row flex-col md:flex items-center justify-between md:mb-10 mb-2">
+          <div className="flex mb-1 md:mb-3 justify-between px-1">
             <form className="w-full ">
               <div className="flex">
                 <input
@@ -23,7 +23,7 @@ const Shop = ({ grillaShop }) => {
             </form>
           </div>
 
-          <div className="mb-2 flex md:flex-row flex-col items-center text-lg ps-4">
+          <div className="mb-2 flex md:flex-row flex-col md:items-center items-start text-base md:text-lg ps-4">
             <label
               htmlFor="select"
               className="text-gray-700 font-semibold mt-2 me-1 mb-2"
