@@ -14,7 +14,7 @@ const ItemLanzamiento = ({
     <>
       {/*Item Lanzamiento template*/}
       <div className="uppercase max-w-xs rounded overflow-hidden shadow-lg mx-auto mb-2 flex flex-col ">
-        <div className="flex flex-grow-0 justify-end">
+        <div className="flex justify-end">
           <span className="inline-block bg-red-600 px-2 text-white rounded">
             Nuevo
           </span>
