@@ -51,7 +51,7 @@ export const nuevosLanzamientos = [
     id: 3,
     title: "voldemort",
     subTitle: "harry potter",
-    img: "https://funko.com/dw/image/v2/BGTS_PRD/on/demandware.static/-/Sites-funko-master-catalog/default/dwd6b70a49/images/funko/5861-1.png?sw=346&sh=346",
+    img: "/multimedia_ funkoshop/multimedia/harry-potter/hermione-1.webp",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",

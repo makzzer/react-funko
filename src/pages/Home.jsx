@@ -12,7 +12,6 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
     <>
       <div className=" max-w-6xl mx-auto md:flex md:flex-col items-center container justify-between md:px-10 ">
         <div className="md:mb-0 w-screen mb-8 h-[50vh] bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
-        
           <div className="max-w-6xl mx-auto h-full md:mt-2 mt-16 ">
             <Branding />
           </div>
@@ -31,12 +30,19 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
             últimos lanzamientos
           </h1>
 
-          <div className="flex md:flex-row flex-col  container justify-between max-w-6xl">
-            <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
-          </div>
+          
+            <div className="p-2">
 
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
+              </div>
+
+            </div>
           
         </main>
+
+
+
       </div>
     </>
   );
