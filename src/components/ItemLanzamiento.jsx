@@ -31,10 +31,10 @@ const ItemLanzamiento = ({
           <p className="text-blue-500 md:text-lg font-semibold text-sm mb-2">{cuotas}</p>
         </div>
         <div className="md:px-4 md:pt-2 pt-0 pb-2  text-center ">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+          <span className="inline-block mb-1 md:mb-0 bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
             {tag1}
           </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+          <span className="inline-block mb-1 md:mb-0 bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
             {tag2}
           </span>
         </div>
