@@ -15,7 +15,7 @@ const ItemLanzamiento = ({
       {/*Item Lanzamiento template*/}
       <div className="uppercase max-w-xs rounded overflow-hidden shadow-lg mx-auto mb-2 flex flex-col ">
         <div className="flex justify-end">
-          <span className="inline-block bg-red-600 px-2 text-white rounded">
+          <span className="inline-block bg-gray-700 px-2 text-white rounded">
             Nuevo
           </span>
         </div>
@@ -37,6 +37,9 @@ const ItemLanzamiento = ({
           <span className="inline-block mb-1 md:mb-0 bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
             {tag2}
           </span>
+          <div className=" text-center items-center">
+            <button className="bg-red-800 rounded-lg p-2 mt-2 font-semibold text-white hover:bg-red-600">Comprar</button>
+          </div>
         </div>
       </div>
     </>

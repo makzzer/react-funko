@@ -7,6 +7,7 @@ import Contacto from "../pages/Contacto";
 //importo el array que le paso como prop al Home, sino no funciona
 import { elementosLanding, nuevosLanzamientos, grillaShop } from "../App";
 import DefaultLayout from "../layouts/DefaultLayout";
+import Carrito from "../pages/Carrito";
 
 //voy a usar un layout y dentro de ese layout un objeto con todas las paginas como main del layout, eso lo hago con <Outlet/>
 
@@ -38,6 +39,11 @@ export const router = createBrowserRouter([
         path: "/contacto",
         element: <Contacto />,
       },
+
+      {
+        path: "/carrito",
+        element: <Carrito />,
+      }
     ],
   },
 ]);

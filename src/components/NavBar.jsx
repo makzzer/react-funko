@@ -28,7 +28,7 @@ const Nav = () => {
     },
     {
       name: "CART",
-      to: "/ingresar",
+      to: "/carrito",
       classname: clasesita,
     },
   ];
