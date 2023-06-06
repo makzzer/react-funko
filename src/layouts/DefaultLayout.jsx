@@ -1,19 +1,15 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Outlet, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { ScrollTop } from "../utilities/ScrollTop";
 
 const DefaultLayout = () => {
-  const { pathPagina } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathPagina]);
-
-  console.log(pathPagina)
+ 
 
   return (
     <>
+      <ScrollTop />
       <div className="">
         <header>
           <NavBar />
