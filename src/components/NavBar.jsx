@@ -72,7 +72,7 @@ const Nav = () => {
       {/**creo el contendor principal donde coloco fixed para que la barra quede pegada cuando scrolleo, le saco fixed por ahora"*/}
       <div className="bg-gray-900 shadow-md fixed mx-auto pt-1 md:pt-4 pb-0 md:py-2 md:pb-4 top-0  w-full left-0">
         {/**creo otro div  que va a contener por un lado al logo, al boton para ampliar y a los links"*/}
-        <div className="px-10 h-[5rem] md:h-auto bg-gray-900 mb-1 justify-between max-w-6xl md:py-1 mx-auto md:flex items-center ">
+        <div className="px-10 h-[5rem] md:h-auto bg-gray-900 mb-0 justify-between max-w-6xl md:py-1 mx-auto md:flex items-center ">
           {/**Div con el logo  */}
           {esPantallaMobile ? (
             <>
@@ -106,7 +106,7 @@ const Nav = () => {
                   <>
                     <li
                       key={navlink.name}
-                      className="bg-gray-900 text-xl md:my-0 my-7 pt-1"
+                      className="bg-gray-900 text-xl md:my-0 my-7 pt-2"
                     >
                       <NavLink
                         to={navlink.to}
