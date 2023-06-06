@@ -106,7 +106,7 @@ const Nav = () => {
                   <>
                     <li
                       key={navlink.name}
-                      className="bg-gray-900 text-xl md:my-0 my-7"
+                      className="bg-gray-900 text-xl md:my-0 my-7 pt-1"
                     >
                       <NavLink
                         to={navlink.to}
