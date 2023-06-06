@@ -3,9 +3,7 @@ import Footer from "../components/Footer";
 import { Outlet, useLocation } from "react-router-dom";
 import { ScrollTop } from "../utilities/ScrollTop";
 
-const DefaultLayout = () => {
-
- 
+const DefaultLayout = () => { 
 
   return (
     <>
