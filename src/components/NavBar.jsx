@@ -5,26 +5,35 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [esPantallaMobile, setEsPantallaMobile] = useState(false);
+  //use effect para plegar el menu en responsive una vez que doy click
+
+  //variable que uso para ver si la barra está presionada
+  let [open, setOpen] = useState(false);
+
+  //metodo para cambiar el boolean del menu
+  //const cambiarBooleanMenu = () => {
+  //setOpen(false);
+  //};
 
   const clasesita =
     "md:ml-0 text-gray-300 py-2 px-0 md:my-0 my-3 md:px-2 rounded-md md:text-xl  text-lg font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300";
-  
-    //links de navegacion configurados en recorrer map, genera un li y dentro un NavLink
+
+  //links de navegacion configurados en recorrer map, genera un li y dentro un NavLink
   let navlinks = [
     {
       name: "SHOP",
       to: "/shop",
-      classname: clasesita ,
+      classname: clasesita,
     },
     {
       name: "CONTACTO",
       to: "/contacto",
-      classname:  clasesita ,
+      classname: clasesita,
     },
     {
       name: "INGRESAR",
       to: "/ingresar",
-      classname: clasesita ,
+      classname: clasesita,
     },
     {
       name: "CART",
@@ -32,9 +41,6 @@ const Nav = () => {
       classname: clasesita,
     },
   ];
-
-  //variable que uso para ver si la barra está presionada
-  let [open, setOpen] = useState(false);
 
   //acá detecto si estoy en pantalla mobile o desktop
   useEffect(() => {
@@ -50,6 +56,17 @@ const Nav = () => {
     };
   }, []);
 
+  const pruebita = () => {
+    console.log( "entre al botoncito");
+  };
+
+  const cambiarMenuAFalse = () =>{
+    setOpen(false)
+  }
+
+
+
+  console.log(open);
   return (
     <>
       {/**creo el contendor principal donde coloco fixed para que la barra quede pegada cuando scrolleo, le saco fixed por ahora"*/}
@@ -59,10 +76,7 @@ const Nav = () => {
           {/**Div con el logo  */}
           {esPantallaMobile ? (
             <>
-              <NavLink
-                className="mr-2 pt-2"
-                to="/"
-              >
+              <NavLink className="mr-2 pt-2" to="/">
                 <IconLogo ancho={200} alto={80} />
               </NavLink>
             </>
@@ -94,7 +108,11 @@ const Nav = () => {
                       key={navlink.name}
                       className="bg-gray-900 text-xl md:my-0 my-7"
                     >
-                      <NavLink to={navlink.to} className={navlink.classname}>
+                      <NavLink
+                        to={navlink.to}
+                        className={navlink.classname}
+                        onClick={(cambiarMenuAFalse)}
+                      >
                         {navlink.name}
                       </NavLink>
                     </li>
