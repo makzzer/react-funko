@@ -1,7 +1,6 @@
 import ItemLanzamiento from "./ItemLanzamiento";
 
 const ListaLanzamientos = ({ ultimosLanzamientos }) => {
-  console.log(ultimosLanzamientos);
 
   return (
     <>

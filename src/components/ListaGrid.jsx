@@ -1,7 +1,6 @@
 import ItemLanzamiento from "./ItemLanzamiento";
 
 const ListaGrid = ({ grillaShop }) => {
-  console.log(grillaShop);
   return grillaShop.map((itemGrilla) => (
     <>
       <div className="py-2">

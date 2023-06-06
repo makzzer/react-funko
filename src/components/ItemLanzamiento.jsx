@@ -9,7 +9,7 @@ const ItemLanzamiento = ({
   tag2,
 }) => {
   
-  console.log(tag1, tag1);
+  
   return (
     <>
       {/*Item Lanzamiento template*/}

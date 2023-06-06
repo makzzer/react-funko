@@ -1,7 +1,7 @@
 import ItemTienda from "./ItemTienda";
 
 const ListaItemsTienda = ({ elementosLand }) => {
-  console.log(elementosLand);
+
   return (
     <>
       {elementosLand.map((elem) => (

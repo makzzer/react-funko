@@ -1,8 +1,17 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const DefaultLayout = () => {
+  const { pathPagina } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathPagina]);
+
+  console.log(pathPagina)
+
   return (
     <>
       <div className="">
