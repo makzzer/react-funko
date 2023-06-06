@@ -76,7 +76,7 @@ const Nav = () => {
           {/**Div con el logo  */}
           {esPantallaMobile ? (
             <>
-              <NavLink className="mr-2 pt-2" to="/">
+              <NavLink className="mr-2 pt-2" to="/" onClick={cambiarMenuAFalse}>
                 <IconLogo ancho={200} alto={80} />
               </NavLink>
             </>
