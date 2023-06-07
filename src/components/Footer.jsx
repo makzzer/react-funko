@@ -55,7 +55,7 @@ const Footer = () => {
 
                     {/*div con img logo*/}
                     <div className="flex m-auto md:m-0 md:ml-auto">
-                        <div className=" my-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-none duration-300"><IconLogotipoSimple /></div>
+                        <div className=" my-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-none duration-300"><IconLogotipoSimple ancho={40} alto={80} /></div>
                     </div>
                 </div>
         

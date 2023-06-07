@@ -1,7 +1,13 @@
+import IconLogoSimple from "./../components/icons/IconLogotipoSimple";
+
 const Ingresar = () => {
   return (
     <>
-      <h1 className="text-5xl min-h-screen mt-20 text-center pt-12">Ingresar</h1>
+      <div className="min-h-screen text-center mx-auto items-center flex max-w-6xl container flex-col mt-6 md:m-20">
+        <div className="text-center pt-20 mt-8">
+          <IconLogoSimple ancho={80} alto={200} />
+        </div>
+      </div>
     </>
   );
 };
