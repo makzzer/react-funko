@@ -1,11 +1,28 @@
 import IconLogoSimple from "./../components/icons/IconLogotipoSimple";
+import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
+import SignIn from "../components/SingIn";
 
 const Ingresar = () => {
+  const esPantallaMobile = DetectarTamañoPantalla();
+  console.log(esPantallaMobile);
+
   return (
     <>
-      <div className="min-h-screen text-center mx-auto items-center flex max-w-6xl container flex-col mt-6 md:m-20">
-        <div className="text-center pt-20 mt-8">
-          <IconLogoSimple ancho={80} alto={200} />
+      //contenedor general
+      {/*contenedor general del login*/}
+      <div className="min-h-screen text-center mx-auto items-center flex max-w-6xl container flex-col mt-6 md:pt-20 md:mt-18 transition-all duration-500">
+        {/*contenedor con la imagen responsive*/}
+        <div className="text-center md:pt-18 pt-14">
+          {esPantallaMobile ? (
+            <IconLogoSimple ancho={70} alto={100} />
+          ) : (
+            <IconLogoSimple ancho={100} alto={100} />
+          )}
+        </div>
+        <h1 className="text-2xl md:text-3xl"> Sign in to Funko</h1>
+
+        <div>
+          <SignIn />
         </div>
       </div>
     </>

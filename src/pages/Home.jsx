@@ -10,7 +10,7 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
 
   return (
     <>
-      <div className=" max-w-6xl mx-auto md:flex md:flex-col items-center container justify-between md:px-10 ">
+      <div className=" transition-all duration-500 max-w-6xl mx-auto md:flex md:flex-col items-center container justify-between md:px-10 ">
         <div className="md:mb-0 w-screen mb-8 h-[50vh] bg-no-repeat bg-cover bg-center bg-[url('./assets/images/funkos-banner.webp')]">
           <div className="max-w-6xl mx-auto h-full md:mt-2 mt-16 ">
             <Branding />

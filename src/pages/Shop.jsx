@@ -21,7 +21,7 @@ const Shop = ({ grillaShop }) => {
   return (
     <>
       {/*este es el div del container general*/}
-      <div className="max-w-6xl mx-auto d:flex md:flex-col items-center container  mt-10 md:mt-20">
+      <div className=" transition-all duration-500 max-w-6xl mx-auto d:flex md:flex-col items-center container  mt-10 md:mt-20">
         <div className="text-center text-4xl md:text-6xl mt-22 pt-14">
           <h1>Shop</h1>
         </div>

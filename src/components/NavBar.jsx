@@ -11,7 +11,6 @@ const Nav = () => {
 
   const esPantallaMobile = DetectarTamañoPantalla();
 
-  console.log(esPantallaMobile)
 
   const clasesita =
     "md:ml-0 text-gray-300 py-2 px-0 md:my-0 my-3 md:px-2 rounded-md md:text-xl  text-lg font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300";
