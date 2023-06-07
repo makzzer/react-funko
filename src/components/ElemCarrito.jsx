@@ -2,21 +2,21 @@ const ElemCarrito = () => {
   return (
     <>
       {/**contenedor del carrito dentro van todos los elems*/}
-      <div className=" bg-gray-400 items-center mx-auto justify-start rounded-md md:min-w-[40rem]  m-2 flex flex-row">
-        <div className="flex md:gap-7 items-center mx-2 md:text-2xl gap-4 justi ">
+      <div className=" bg-gray-200 items-center mx-auto justify-start rounded-md md:min-w-[40rem]  m-2 flex flex-row">
+        <div className="text-gray-900 flex md:gap-7 items-center mx-2 md:text-2xl gap-4 justi ">
           <div>
-            <h1 className=" text-white ">Nombre </h1>
+            <h1>Nombre </h1>
           </div>
           <div>
-            <h1 className=" text-white">Precio </h1>
-          </div>
-
-          <div>
-            <h1 className=" text-white">Cantidad </h1>
+            <h1>Precio </h1>
           </div>
 
           <div>
-            <h1 className=" text-white me-4">Color </h1>
+            <h1>Cantidad </h1>
+          </div>
+
+          <div>
+            <h1 className="me-4">Color </h1>
           </div>
         </div>
 

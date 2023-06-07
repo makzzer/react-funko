@@ -7,9 +7,8 @@ const ItemLanzamiento = ({
   cuotas,
   tag1,
   tag2,
+  agregarProductoCarrito,
 }) => {
-  
-  
   return (
     <>
       {/*Item Lanzamiento template*/}
@@ -19,16 +18,16 @@ const ItemLanzamiento = ({
             Nuevo
           </span>
         </div>
-        <img
-          className="w-full grow-0"
-          src={img}
-          alt="Imagen de la card"
-        ></img>
+        <img className="w-full grow-0" src={img} alt="Imagen de la card"></img>
         <div className="md:px-6 font-semibold px-4 text-center ">
           <div className="font-semibold md:text-md text-sm">{subTitle}</div>
           <div className="font-bold md:text-2xl text-sm mb-2">{title}</div>
-          <p className="text-gray-700 md:text-xl font-semibold text-lg font-bol">${precio}</p>
-          <p className="text-blue-500 md:text-lg font-semibold text-sm mb-2">{cuotas}</p>
+          <p className="text-gray-700 md:text-xl font-semibold text-lg font-bol">
+            ${precio}
+          </p>
+          <p className="text-blue-500 md:text-lg font-semibold text-sm mb-2">
+            {cuotas}
+          </p>
         </div>
         <div className="md:px-4 md:pt-2 pt-0 pb-2  text-center ">
           <span className="inline-block mb-1 md:mb-0 bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
@@ -38,7 +37,12 @@ const ItemLanzamiento = ({
             {tag2}
           </span>
           <div className=" text-center items-center">
-            <button className="bg-red-800 rounded-lg p-2 mt-2 font-semibold text-white hover:bg-red-600">Comprar</button>
+            <button
+              onClick={() => agregarProductoCarrito(id)}
+              className="bg-red-800 rounded-lg p-2 mt-2 font-semibold text-white hover:bg-red-600"
+            >
+              Comprar
+            </button>
           </div>
         </div>
       </div>

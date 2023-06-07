@@ -28,7 +28,7 @@ export const elementosLanding = [
 
 export const nuevosLanzamientos = [
   {
-    id: 1,
+    id: 0,
     title: "Iron Man",
     subTitle: "Iron Man",
     img: "https://i5.walmartimages.com/asr/33fb6837-0de6-4940-a946-67762e862fa9_1.ebd0709f03d53a1283b55731b68068a5.png",
@@ -39,7 +39,7 @@ export const nuevosLanzamientos = [
   },
 
   {
-    id: 2,
+    id: 1,
     title: "Storm Trooper",
     subTitle: "star wars",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
@@ -50,7 +50,7 @@ export const nuevosLanzamientos = [
   },
 
   {
-    id: 3,
+    id: 2,
     title: "voldemort",
     subTitle: "harry potter",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
@@ -63,7 +63,7 @@ export const nuevosLanzamientos = [
 
 export const grillaShop = [
   {
-    id: 1,
+    id: 0,
     title: "Iron Man",
     subTitle: "Iron Man",
     img: "https://i5.walmartimages.com/asr/33fb6837-0de6-4940-a946-67762e862fa9_1.ebd0709f03d53a1283b55731b68068a5.png",
@@ -74,7 +74,7 @@ export const grillaShop = [
   },
 
   {
-    id: 2,
+    id: 1,
     title: "Storm Trooper",
     subTitle: "star wars",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
@@ -85,7 +85,7 @@ export const grillaShop = [
   },
 
   {
-    id: 3,
+    id: 2,
     title: "voldemort",
     subTitle: "HP",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
@@ -95,7 +95,7 @@ export const grillaShop = [
     tag2: "slitherin",
   },
   {
-    id: 4,
+    id: 3,
     title: "Iron Man",
     subTitle: "Iron Man",
     img: "https://i5.walmartimages.com/asr/33fb6837-0de6-4940-a946-67762e862fa9_1.ebd0709f03d53a1283b55731b68068a5.png",
@@ -106,7 +106,7 @@ export const grillaShop = [
   },
 
   {
-    id: 5,
+    id: 4,
     title: "Storm Trooper",
     subTitle: "star wars",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
@@ -116,6 +116,16 @@ export const grillaShop = [
     tag2: "destructor",
   },
 
+  {
+    id: 5,
+    title: "voldemort",
+    subTitle: "hp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
+    precio: 8000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "tom riddle",
+    tag2: "slitherin",
+  },
   {
     id: 6,
     title: "voldemort",
@@ -128,16 +138,6 @@ export const grillaShop = [
   },
   {
     id: 7,
-    title: "voldemort",
-    subTitle: "hp",
-    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
-    precio: 8000.0,
-    cuotas: "3 cuotas sin interés",
-    tag1: "tom riddle",
-    tag2: "slitherin",
-  },
-  {
-    id: 8,
     title: "voldemort",
     subTitle: "hp",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",

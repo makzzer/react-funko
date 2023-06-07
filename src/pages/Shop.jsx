@@ -1,13 +1,29 @@
+import { useEffect, useState } from "react";
 import ListaGrid from "../components/ListaGrid";
 
 const Shop = ({ grillaShop }) => {
+  const [productosCarrito, setProductosCarrito] = useState([]);
+
+  const agregarProductoCarrito = (id) => {
+    setProductosCarrito([...productosCarrito, grillaShop[id]]);
+  };
+
+  console.log(productosCarrito);
+
+  {
+    /** creo que este useEffect es necesario para mandarle al carrito el array nuevo actualizado cada vez que presiono comprar en la card
+  useEffect = (() =>{
+
+  })
+*/
+  }
+
   return (
     <>
       {/*este es el div del container general*/}
       <div className="max-w-6xl mx-auto d:flex md:flex-col items-center container  mt-10 md:mt-20">
-        
         <div className="text-center text-4xl md:text-6xl mt-22 pt-14">
-          <h1 >Shop</h1>
+          <h1>Shop</h1>
         </div>
 
         {/*div flex col que contiene  barra y filtros*/}
@@ -47,7 +63,10 @@ const Shop = ({ grillaShop }) => {
         <main className="container flex flex-col md:max-w-6xl">
           <div className="p-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10">
-              <ListaGrid grillaShop={grillaShop} />
+              <ListaGrid
+                grillaShop={grillaShop}
+                agregarProductoCarrito={agregarProductoCarrito}
+              />
             </div>
           </div>
         </main>
