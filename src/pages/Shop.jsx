@@ -3,15 +3,16 @@ import ListaGrid from "../components/ListaGrid";
 const Shop = ({ grillaShop }) => {
   return (
     <>
-
-
       {/*este es el div del container general*/}
       <div className="max-w-6xl mx-auto d:flex md:flex-col items-center container  mt-10 md:mt-20">
-     
+        
+        <div className="text-center text-4xl md:text-6xl mt-22 pt-14">
+          <h1 >Shop</h1>
+        </div>
 
         {/*div flex col que contiene  barra y filtros*/}
 
-        <div className=" pt-20 md:flex-row flex-col md:flex items-center justify-between md:mb-10 mb-2">
+        <div className=" pt-7 md:flex-row flex-col md:flex items-center justify-between md:mb-10 mb-2">
           <div className="flex mb-1 md:mb-3 justify-between px-1">
             <form className="w-full ">
               <div className="flex">
@@ -42,8 +43,6 @@ const Shop = ({ grillaShop }) => {
             </select>
           </div>
         </div>
-
-
 
         <main className="container flex flex-col md:max-w-6xl">
           <div className="p-4">
