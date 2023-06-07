@@ -5,12 +5,10 @@ import { NavLink } from "react-router-dom";
 import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
 
 const Nav = () => {
-
   //variable que uso para ver si la barra está presionada
   let [open, setOpen] = useState(false);
 
   const esPantallaMobile = DetectarTamañoPantalla();
-
 
   const clasesita =
     "md:ml-0 text-gray-300 py-2 px-0 md:my-0 my-3 md:px-2 rounded-md md:text-xl  text-lg font-medium transition hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300";
@@ -38,7 +36,6 @@ const Nav = () => {
       classname: clasesita,
     },
   ];
-
 
   const cambiarMenuAFalse = () => {
     setOpen(false);
@@ -69,7 +66,9 @@ const Nav = () => {
             onClick={() => setOpen(!open)}
             className="text-3xl gap-4 absolute right-12 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
           >
-            <ion-icon name={open ? "close" : "menu"}></ion-icon>
+
+              <ion-icon name={open ? "close" : "menu"}></ion-icon>
+            
           </div>
 
           <div>
