@@ -8,7 +8,7 @@ const SignIn = () => {
               htmlFor="email"
               className="block text-gray-700 font-bold mb-2 text-sm text-start"
             >
-              UserName or eMail Address
+              Username or email address
             </label>
 
             <div></div>
@@ -16,7 +16,7 @@ const SignIn = () => {
               type="email"
               id="email"
               className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Email address"
+              
             />
           </div>
 
@@ -43,7 +43,7 @@ const SignIn = () => {
                 type="password"
                 id="password"
                 className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Password"
+               
               />
             </div>
             
@@ -55,9 +55,18 @@ const SignIn = () => {
             >
               Sign In
             </button>
-           
           </div>
         </form>
+      </div>
+
+      <div className="flex justify-center bg-gray-200 shadow-md rounded px-8 py-4 mt-4 min-w-[20rem] md:w-[20rem]">
+        <h1 className="block text-gray-700 font-bold mb-2 text-sm text-start">New in Funko?</h1>
+        <a
+              className="ms-2 inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+              href="#"
+            >
+              Create Account
+            </a>
       </div>
     </>
   );
