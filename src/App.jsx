@@ -86,9 +86,9 @@ export const grillaShop = [
 
   {
     id: 2,
-    title: "harry",
+    title: "voldemort",
     subTitle: "HP",
-    img: "/src/assets/images/harry-1.webp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
@@ -118,9 +118,9 @@ export const grillaShop = [
 
   {
     id: 5,
-    title: "harry",
+    title: "voldemort",
     subTitle: "hp",
-    img: "/src/assets/images/harry-1.webp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
@@ -128,9 +128,9 @@ export const grillaShop = [
   },
   {
     id: 6,
-    title: "Harry",
+    title: "voldemort",
     subTitle: "hp",
-    img: "/src/assets/images/harry-1.webp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
@@ -138,9 +138,9 @@ export const grillaShop = [
   },
   {
     id: 7,
-    title: "harry",
+    title: "voldemort",
     subTitle: "hp",
-    img: "/src/assets/images/harry-1.webp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
