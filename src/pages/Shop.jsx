@@ -1,8 +1,9 @@
 import ListaGrid from "../components/ListaGrid";
-import { cualElegi } from "../components/ItemLanzamiento";
 import { useCarritoContext } from "../context/CarritoContext";
 
 const Shop = ({ grillaShop }) => {
+
+
 
   //desestructuro el carrito
 

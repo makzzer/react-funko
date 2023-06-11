@@ -1,9 +1,6 @@
 import { useCarritoContext } from "../context/CarritoContext";
 
-export const cualElegi = (id) => {
-  console.log("estoy en cual elegiiiiiii" + id)
- // return id;
-};
+
 
 
 
@@ -17,7 +14,26 @@ const ItemLanzamiento = ({
   tag1,
   tag2,
 }) => {
+
+
   const { agregarAlCarrito } = useCarritoContext();
+
+
+  //logica agregada para comprar articulo, se lo paso desde acá completo y lo labura mi hook del context
+  const comprarArticulo = (id) =>{
+    const item = {
+      id,
+      title,
+      subTitle,
+      img,
+      precio,
+      cuotas,
+      tag1,
+      tag2,
+    };
+    agregarAlCarrito(item)
+  }
+
 
   return (
     <>
@@ -49,7 +65,7 @@ const ItemLanzamiento = ({
           <div className=" text-center items-center">
             <button
               //onClick={() => agregarAlCarrito(id)}
-              onClick={()=>cualElegi(id)}
+              onClick={()=>comprarArticulo(id)}
               className="bg-red-800 rounded-lg p-2 mt-2 font-semibold text-white hover:bg-red-600"
             >
               Comprar
