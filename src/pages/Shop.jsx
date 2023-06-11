@@ -1,22 +1,13 @@
-import { useEffect, useState } from "react";
 import ListaGrid from "../components/ListaGrid";
+import { cualElegi } from "../components/ItemLanzamiento";
+import { useCarritoContext } from "../context/CarritoContext";
 
 const Shop = ({ grillaShop }) => {
-  const [productosCarrito, setProductosCarrito] = useState([]);
 
-  const agregarProductoCarrito = (id) => {
-    setProductosCarrito([...productosCarrito, grillaShop[id]]);
-  };
+  //desestructuro el carrito
 
-  console.log(productosCarrito);
 
-  {
-    /** creo que este useEffect es necesario para mandarle al carrito el array nuevo actualizado cada vez que presiono comprar en la card
-  useEffect = (() =>{
 
-  })
-*/
-  }
 
   return (
     <>
@@ -65,7 +56,7 @@ const Shop = ({ grillaShop }) => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10">
               <ListaGrid
                 grillaShop={grillaShop}
-                agregarProductoCarrito={agregarProductoCarrito}
+                //agregarProductoCarrito={agregarProductoCarrito}
               />
             </div>
           </div>

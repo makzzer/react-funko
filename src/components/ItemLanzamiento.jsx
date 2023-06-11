@@ -1,3 +1,12 @@
+import { useCarritoContext } from "../context/CarritoContext";
+
+export const cualElegi = (id) => {
+  console.log("estoy en cual elegiiiiiii" + id)
+  return id;
+};
+
+
+
 const ItemLanzamiento = ({
   id,
   title,
@@ -7,8 +16,9 @@ const ItemLanzamiento = ({
   cuotas,
   tag1,
   tag2,
-  agregarProductoCarrito,
 }) => {
+  const { agregarAlCarrito } = useCarritoContext();
+
   return (
     <>
       {/*Item Lanzamiento template*/}
@@ -38,7 +48,7 @@ const ItemLanzamiento = ({
           </span>
           <div className=" text-center items-center">
             <button
-              onClick={() => agregarProductoCarrito(id)}
+              onClick={() => agregarAlCarrito(id)}
               className="bg-red-800 rounded-lg p-2 mt-2 font-semibold text-white hover:bg-red-600"
             >
               Comprar

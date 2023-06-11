@@ -1,7 +1,7 @@
 const SignIn = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center">
+      <div className="rounded-md flex flex-col justify-center items-center">
         <form className=" flex flex-col bg-gray-200 shadow-md rounded px-8 py-6 mt-4 min-w-[20rem] md:w-[20rem]">
           <div className="mb-4">
             <label
