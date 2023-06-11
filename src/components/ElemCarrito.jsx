@@ -1,23 +1,17 @@
-const ElemCarrito = () => {
+const ElemCarrito = ({title,precio}) => {
   return (
     <>
       {/**contenedor del carrito dentro van todos los elems*/}
-      <div className=" bg-gray-200 items-center mx-auto justify-start rounded-md md:min-w-[40rem]  m-2 flex flex-row">
-        <div className="text-gray-900 flex md:gap-7 items-center mx-2 md:text-2xl gap-4 justi ">
+      <div className=" bg-gray-200 items-center mx-auto justify-start rounded-md md:min-w-[40rem] m-2 flex flex-row">
+        <div className="text-gray-900 flex md:gap-7 items-center mx-2 md:text-2xl gap-4 ">
           <div>
-            <h1>Nombre </h1>
+            <h1>{title} </h1>
           </div>
           <div>
-            <h1>Precio </h1>
-          </div>
-
-          <div>
-            <h1>Cantidad </h1>
+            <h1>{precio} </h1>
           </div>
 
-          <div>
-            <h1 className="me-4">Color </h1>
-          </div>
+
         </div>
 
         <div className="flex m-2 me-2 gap-2 mx-auto my-auto">
