@@ -2,7 +2,7 @@ import { useCarritoContext } from "../context/CarritoContext";
 
 export const cualElegi = (id) => {
   console.log("estoy en cual elegiiiiiii" + id)
-  return id;
+ // return id;
 };
 
 
@@ -48,7 +48,8 @@ const ItemLanzamiento = ({
           </span>
           <div className=" text-center items-center">
             <button
-              onClick={() => agregarAlCarrito(id)}
+              //onClick={() => agregarAlCarrito(id)}
+              onClick={()=>cualElegi(id)}
               className="bg-red-800 rounded-lg p-2 mt-2 font-semibold text-white hover:bg-red-600"
             >
               Comprar
