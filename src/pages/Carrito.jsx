@@ -12,8 +12,8 @@ const Carrito = () => {
 
   return (
     <>
-      <div className="min-h-screen w-full text-center items-center flex-col mt-6 md:m-20">
-        <h1 className="pt-20 text-4xl md:text-6xl pb-4">Carrito</h1>
+      <div className="min-h-screen mx-auto max-w-6xl text-center items-center flex-col mt-10 md:mt-20">
+        <h1 className="text-4xl md:text-6xl pb-4 mt-22 pt-14">Carrito</h1>
 
         {carrito.length === 0 ? (
           <h1 className="text-2xl">Tu carrito está vacío</h1>
