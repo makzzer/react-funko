@@ -24,18 +24,23 @@ const CarritoProvider = ({ children }) => {
     //console.log(id)
   };
 
-  
-
-
   //borrar carrito
 
   const vaciarCarrito = () => {
     setCarrito([]);
   };
 
+  const totalCarrito = () => {
+    let total = 0;
+    carrito.forEach((elemento) => {
+      total += elemento.precio;
+    });
+    return total
+  };
+
   return (
     <CarritoContext.Provider
-      value={{ carrito, setCarrito, agregarAlCarrito, vaciarCarrito }}
+      value={{ carrito, setCarrito, agregarAlCarrito, vaciarCarrito,totalCarrito }}
     >
       {children}
     </CarritoContext.Provider>
