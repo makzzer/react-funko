@@ -16,6 +16,9 @@ const Carrito = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  //le paso al elemento del carrito el ID al que corresponde el presionado
+  const indiceProducto = 0;
+
   return (
 
 
@@ -40,6 +43,7 @@ const Carrito = () => {
             <li className="p-0 m-2 md:m-0">
               <ElemCarrito
                 key={elem.id}
+                id={elem.id}
                 title={elem.title}
                 precio={elem.precio}
                 img={elem.img}

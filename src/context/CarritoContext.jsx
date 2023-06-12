@@ -24,12 +24,18 @@ const CarritoProvider = ({ children }) => {
     //console.log(id)
   };
 
-  //borrar carrito
-
+  //borrar carrito lo uso en Carrito
   const vaciarCarrito = () => {
     setCarrito([]);
   };
 
+  //eliminar elemento del carrito lo uso en elemCarrito
+  const eliminarElementoCarrito = (id) => {
+    const nuevoArraySinElem = carrito.filter((elemento)=> elemento.id !== id)
+    setCarrito(nuevoArraySinElem)
+  }
+
+  //lo uso en Carrito, veo la suma total del precio de los articulos comprados
   const totalCarrito = () => {
     let total = 0;
     carrito.forEach((elemento) => {
@@ -40,7 +46,7 @@ const CarritoProvider = ({ children }) => {
 
   return (
     <CarritoContext.Provider
-      value={{ carrito, setCarrito, agregarAlCarrito, vaciarCarrito,totalCarrito }}
+      value={{ carrito, setCarrito, agregarAlCarrito, vaciarCarrito,totalCarrito,eliminarElementoCarrito }}
     >
       {children}
     </CarritoContext.Provider>
