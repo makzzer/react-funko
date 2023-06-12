@@ -2,6 +2,7 @@ import { useCarritoContext } from "../context/CarritoContext";
 import ElemCarrito from "../components/ElemCarrito";
 import { useEffect } from "react";
 import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
+import { NavLink } from "react-router-dom";
 
 const Carrito = () => {
   //desestructuro desde m context los metodos y el array de carrito para usarlo en este componente
@@ -26,7 +27,10 @@ const Carrito = () => {
       <h1 className="text-4xl md:text-6xl pb-4 mt-22 pt-14">Carrito</h1>
 
       {carrito.length === 0 ? (
-        <h1 className="text-2xl">Tu carrito está vacío</h1>
+        <>
+        <h1 className="text-2xl text-red-700 mb-4">Tu carrito está vacío</h1>
+        <NavLink to={"/shop"} className="m-2 p-2 bg-red-700 rounded-lg text-lg text-white">Ir al Shop</NavLink>
+        </>
       ) : (
         <ul className="border rounded-md divide-y md:m-0 m-2">
           <li
