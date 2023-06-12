@@ -29,7 +29,7 @@ const Carrito = () => {
       {carrito.length === 0 ? (
         <>
         <h1 className="text-2xl text-red-700 mb-4">Tu carrito está vacío</h1>
-        <NavLink to={"/shop"} className="m-2 p-2 bg-red-700 rounded-lg text-lg text-white">Ir al Shop</NavLink>
+        <NavLink to={"/shop"} className="m-2 p-2 bg-red-700 rounded-lg text-lg hover:bg-red-600 text-white">Ir al Shop</NavLink>
         </>
       ) : (
         <ul className="border rounded-md divide-y md:m-0 m-2">
@@ -66,7 +66,7 @@ const Carrito = () => {
       {carrito.length > 0 && (
         <div className="items-center flex justify-center">
           <button
-            className="py-2 bg-red-700 rounded-md px-2 m-2 text-md font-semibold text-white"
+            className="py-2  bg-red-700 rounded-lg text-lg hover:bg-red-600 px-2 m-2 text-md font-semibold text-white"
             onClick={() => {
               vaciarCarrito();
               window.scrollTo(0, 0);
