@@ -4,8 +4,6 @@ import { useContext } from "react";
 //Creo el contexto para compartir el elemento carrito
 export const CarritoContext = createContext();
 
-
-
 //creo el provider para inicializar el valor del carrito y grabarlo en local storage
 
 const CarritoProvider = ({ children }) => {
@@ -20,17 +18,22 @@ const CarritoProvider = ({ children }) => {
     localStorage.itemscarrito = JSON.stringify(carrito);
   }, [carrito]);
 
-
-
   //acá le agrego un item al carrito
-const agregarAlCarrito = (item) => {
-  
-  setCarrito([...carrito, item]);
-  //console.log(id)
-};
+  const agregarAlCarrito = (item) => {
+    setCarrito([...carrito, item]);
+    //console.log(id)
+  };
+
+  //borrar carrito
+
+  const vaciarCarrito = () => {
+    setCarrito([]);
+  };
 
   return (
-    <CarritoContext.Provider value={{ carrito, setCarrito, agregarAlCarrito }}>
+    <CarritoContext.Provider
+      value={{ carrito, setCarrito, agregarAlCarrito, vaciarCarrito }}
+    >
       {children}
     </CarritoContext.Provider>
   );
@@ -41,6 +44,4 @@ export default CarritoProvider;
 
 //Creo mi hook para desestructurar y obtener el contenido de mi provider
 
-
 export const useCarritoContext = () => useContext(CarritoContext);
-
