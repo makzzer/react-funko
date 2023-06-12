@@ -2,11 +2,14 @@ import ItemTienda from "./ItemTienda";
 
 const ListaItemsTienda = ({ elementosLand }) => {
 
+{/*comento estas clases en el div arriba de <ItemTienda    md:py-1 max-w-6xl mx-auto md:flex items-center container justify-between  md:px-10 px-2*/}
+
+
   return (
     <>
       {elementosLand.map((elem) => (
         <>
-        <div className="md:py-1 max-w-6xl mx-auto md:flex items-center container justify-between  md:px-10 px-2">
+        <div className="">
           <ItemTienda
             key={elem.id}
             title={elem.title}

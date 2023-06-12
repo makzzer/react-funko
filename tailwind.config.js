@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./index.html",
@@ -8,5 +7,10 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  darkMode:"class",
-}
+  darkMode: "class",
+  variants: {
+    extend: {
+      opacity: ["responsive", "hover", "focus", "group-hover"],
+    },
+  },
+};

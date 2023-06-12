@@ -24,6 +24,9 @@ const CarritoProvider = ({ children }) => {
     //console.log(id)
   };
 
+  
+
+
   //borrar carrito
 
   const vaciarCarrito = () => {
