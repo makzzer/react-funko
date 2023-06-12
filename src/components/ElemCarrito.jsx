@@ -1,28 +1,30 @@
-const ElemCarrito = ({ title, precio }) => {
+const ElemCarrito = ({ title, precio,img }) => {
   return (
-    <>
-      {/**contenedor del carrito dentro van todos los elems*/}
-      <div className="bg-gray-200 items-center border-2 border-solid uppercase max-w-md md:ms-0 md:max-w-none border-gray-300 justify-start rounded-md  m-2 flex flex-row w-full">
-        <div className="text-gray-900 flex md:gap-7 items-center mx-2 md:text-2xl gap-4">
-          <div>
-            <h1>{title} </h1>
-          </div>
-          <div>
-            <h1>{precio} </h1>
-          </div>
+    <form className="divide-y md:divide-x border uppercase max-w-md md:ms-0 md:max-w-none justify-start rounded-md md:p-4 m-2 flex md:flex-row flex-col w-full">
+     
+      <div className="flex md:flex-row flex-col border border-gray-300 border-solid divide-y md:divide-x font-semibold items-center justify-center">
 
+        <button className="ml-auto md:ml-0 z-[-1] cursor-pointer">
+          <ion-icon name="close-circle-outline" size="large"></ion-icon>
+        </button>
+
+        <div className="mx-auto items-center ">
+          <img src={img} alt="Producto" className="w-20 h-20" />
         </div>
-
-        <div className="flex m-2 me-2 gap-2 mx-auto my-auto">
-          <button className="btn border-t-indigo-300 min-w-[1.2rem] bg-green-400 p-1 rounded-lg">
-            +
-          </button>
-          <button className="btn min-w-[1.2rem] border-t-indigo-300 bg-red-400 p-1 rounded-lg">
-            -
-          </button>
+        <div className="min-w-[16rem] ">
+          <h1 className="items-start">Producto: {title}</h1>
+        </div>
+        <div>
+          <h1 >Precio: {precio}</h1>
         </div>
       </div>
-    </>
+
+      <div className="flex m-2 me-2 gap-2 mx-auto my-auto">
+        <button className="btn border-t-indigo-300 min-w-[1.2rem] bg-green-400 p-1 rounded-lg">
+          +
+        </button>
+      </div>
+    </form>
   );
 };
 

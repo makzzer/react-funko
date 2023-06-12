@@ -13,8 +13,8 @@ const Carrito = () => {
         <h1 className="text-2xl">El Carrito está vacío</h1>
       ) : (
         carrito.map((elem) => (
-          <div className="me-3 md:me-0">
-          <ElemCarrito key={elem.id} title={elem.title} precio={elem.precio} />
+          <div className=" md:me-0 mx-auto flex justify-center">
+          <ElemCarrito key={elem.id} title={elem.title} precio={elem.precio} img={elem.img} />
           </div>
         ))
       )}
