@@ -71,6 +71,15 @@ const Nav = () => {
             
           </div>
 
+          <NavLink
+            to={"/carrito"}
+            className="text-3xl gap-4 absolute right-2 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
+          >
+
+              <ion-icon name="cart-outline"></ion-icon>
+            
+          </NavLink>
+
           <div>
             <ul
               className={` mt-1 md:flex md:items-center md:pb-0 absolute md:static pb-1 bg-gray-900 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-11 transition-all pt-0  duration-500 ease-in ${
