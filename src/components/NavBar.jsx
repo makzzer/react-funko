@@ -30,11 +30,6 @@ const Nav = () => {
       to: "/ingresar",
       classname: clasesita,
     },
-    {
-      name: "CART",
-      to: "/carrito",
-      classname: clasesita,
-    },
   ];
 
   const cambiarMenuAFalse = () => {
@@ -66,18 +61,15 @@ const Nav = () => {
             onClick={() => setOpen(!open)}
             className="text-3xl gap-4 absolute right-14 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
           >
-
-              <ion-icon name={open ? "close" : "menu"}></ion-icon>
-            
+            <ion-icon name={open ? "close" : "menu"}></ion-icon>
           </div>
 
           <NavLink
             to={"/carrito"}
+            onClick={() => setOpen(false)}
             className="text-3xl gap-4 absolute right-4 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
           >
-
-              <ion-icon name="cart-outline"></ion-icon>
-            
+            <ion-icon name="cart-outline"></ion-icon>
           </NavLink>
 
           <div>
@@ -104,6 +96,14 @@ const Nav = () => {
                   </>
                 );
               })}
+              {!esPantallaMobile && (
+                <NavLink
+                  to={"/carrito"}
+                  className="text-3xl gap-4 transition hover:-translate-y-1 hover:scale-95 hover:bg-red-500 duration-300 text-red-800 cursor-pointer ps-1 pt-3 "
+                >
+                  <ion-icon name="cart-outline"></ion-icon>
+                </NavLink>
+              )}
             </ul>
           </div>
         </div>
