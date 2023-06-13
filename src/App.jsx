@@ -97,9 +97,9 @@ export const grillaShop = [
   {
     id: 3,
     title: "Iron Man",
-    subTitle: "Iron Man",
+    subTitle: "marvel",
     img: "https://i5.walmartimages.com/asr/33fb6837-0de6-4940-a946-67762e862fa9_1.ebd0709f03d53a1283b55731b68068a5.png",
-    precio: 5000,
+    precio: 7000,
     cuotas: "12 cuotas sin interés",
     tag1: "AVENGERS",
     tag2: "TONY STARK",
@@ -107,10 +107,10 @@ export const grillaShop = [
 
   {
     id: 4,
-    title: "Storm Trooper",
+    title: "darth maul",
     subTitle: "star wars",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
-    precio: 4200.0,
+    precio: 8300.0,
     cuotas: "6 cuotas sin interés",
     tag1: "imperio",
     tag2: "destructor",
@@ -118,7 +118,7 @@ export const grillaShop = [
 
   {
     id: 5,
-    title: "voldemort",
+    title: "hermione",
     subTitle: "hp",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 8000.0,
@@ -128,17 +128,17 @@ export const grillaShop = [
   },
   {
     id: 6,
-    title: "voldemort",
+    title: "luna lovegood",
     subTitle: "hp",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
-    precio: 8000.0,
+    precio: 11000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
     tag2: "slitherin",
   },
   {
     id: 7,
-    title: "voldemort",
+    title: "ron weasley",
     subTitle: "hp",
     img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
     precio: 8000.0,
