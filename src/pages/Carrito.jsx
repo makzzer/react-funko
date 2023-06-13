@@ -51,6 +51,7 @@ const Carrito = () => {
                 title={elem.title}
                 precio={elem.precio}
                 img={elem.img}
+                cantidad={elem.cantidad}
               />
             </li>
           ))}

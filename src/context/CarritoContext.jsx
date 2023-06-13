@@ -36,14 +36,21 @@ const CarritoProvider = ({ children }) => {
       //const carritoActualizado = carrito.map((elem) => elem.id === item.id)
 
       console.log("ya existe en el carrito no lo agrego");
-      // ? { ...elem, cantidad: cantidad + 1 }
-      //: elem;
-      //console.log("ya existe en el carrito")
-      //setCarrito(carritoActualizado);
 
-      //si el producto no existe lo agrego al carrito
+      //recorro el carrito y le actualizo la cantidad al elemento que agregué
+
+      const carritoActualizado = carrito.map ((elem) => elem.id === item.id
+      ? {...elem, cantidad: elem.cantidad + 1}
+      : elem)
+      setCarrito(carritoActualizado)
     }
+    
   };
+
+
+
+
+  
 
   //borrar carrito lo uso en Carrito
   const vaciarCarrito = () => {

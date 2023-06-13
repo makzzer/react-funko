@@ -1,6 +1,6 @@
 import { useCarritoContext } from "../context/CarritoContext";
 
-const ElemCarrito = ({ id, title, precio, img }) => {
+const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
   const { eliminarElementoCarrito } = useCarritoContext();
 
   //metodo que uso para eliminar el elemento metodo original desde carrito context
@@ -30,6 +30,9 @@ const ElemCarrito = ({ id, title, precio, img }) => {
         </div>
         <div className="min-w-[16rem] ">
           <h1 className="items-start">Producto: {title}</h1>
+        </div>
+        <div>
+          <h1 className="text-red-600 pe-2">Cantidad: {cantidad}</h1>
         </div>
         <div>
           <h1>Precio: {precio}</h1>
