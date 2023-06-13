@@ -63,11 +63,11 @@ const CarritoProvider = ({ children }) => {
     setCarrito(nuevoArraySinElem);
   };
 
-  //lo uso en Carrito, veo la suma total del precio de los articulos comprados
+  //lo uso en Carrito, veo la suma total del precio de los articulos comprados x la cantidad de cada uno
   const totalCarrito = () => {
     let total = 0;
     carrito.forEach((elemento) => {
-      total += elemento.precio;
+      total += elemento.precio * elemento.cantidad;
     });
     return total;
   };
