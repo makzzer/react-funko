@@ -20,8 +20,29 @@ const CarritoProvider = ({ children }) => {
 
   //acá le agrego un item al carrito
   const agregarAlCarrito = (item) => {
-    setCarrito([...carrito, item]);
-    //console.log(id)
+    console.log(item.id);
+    const existeElementoEnCarrito = carrito.some((elem) => elem.id === item.id);
+
+    //si existe el producto en el carrito , le aumento el contador de cantidad pero no lo agrego
+
+    console.log("existe o nooo" + existeElementoEnCarrito);
+
+    
+    if (!existeElementoEnCarrito) {
+      console.log("no existe lo agrego");
+      setCarrito([...carrito,{...item, cantidad:1}])
+      //console.log(item.cantidad)
+    } else {
+      //const carritoActualizado = carrito.map((elem) => elem.id === item.id)
+
+      console.log("ya existe en el carrito no lo agrego");
+      // ? { ...elem, cantidad: cantidad + 1 }
+      //: elem;
+      //console.log("ya existe en el carrito")
+      //setCarrito(carritoActualizado);
+
+      //si el producto no existe lo agrego al carrito
+    }
   };
 
   //borrar carrito lo uso en Carrito
@@ -31,9 +52,9 @@ const CarritoProvider = ({ children }) => {
 
   //eliminar elemento del carrito lo uso en elemCarrito
   const eliminarElementoCarrito = (id) => {
-    const nuevoArraySinElem = carrito.filter((elemento)=> elemento.id !== id)
-    setCarrito(nuevoArraySinElem)
-  }
+    const nuevoArraySinElem = carrito.filter((elemento) => elemento.id !== id);
+    setCarrito(nuevoArraySinElem);
+  };
 
   //lo uso en Carrito, veo la suma total del precio de los articulos comprados
   const totalCarrito = () => {
@@ -41,12 +62,19 @@ const CarritoProvider = ({ children }) => {
     carrito.forEach((elemento) => {
       total += elemento.precio;
     });
-    return total
+    return total;
   };
 
   return (
     <CarritoContext.Provider
-      value={{ carrito, setCarrito, agregarAlCarrito, vaciarCarrito,totalCarrito,eliminarElementoCarrito }}
+      value={{
+        carrito,
+        setCarrito,
+        agregarAlCarrito,
+        vaciarCarrito,
+        totalCarrito,
+        eliminarElementoCarrito,
+      }}
     >
       {children}
     </CarritoContext.Provider>
