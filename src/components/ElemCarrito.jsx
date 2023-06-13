@@ -19,7 +19,7 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
 
 
         <button
-          className="ml-auto md:ml-0  cursor-pointer me-2"
+          className="ml-auto md:ml-0 z-0 cursor-pointer me-2"
           onClick={eliminarElemento}
         >
           <ion-icon name="close-circle-outline" size="large"></ion-icon>
