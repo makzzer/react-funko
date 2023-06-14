@@ -7,7 +7,9 @@ const ListaItemsTienda = ({ elementosLand }) => {
 
   return (
     <>
-      {elementosLand.map((elem) => (
+    <ul className="flex flex-col  px-10 mx-auto content-center justify-center">
+    {elementosLand.map((elem) => (
+        
         <>
         <div className="">
           <ItemTienda
@@ -20,6 +22,11 @@ const ListaItemsTienda = ({ elementosLand }) => {
           </div>
         </>
       ))}
+
+
+
+    </ul>
+
     </>
   );
 };

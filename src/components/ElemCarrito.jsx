@@ -14,8 +14,8 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
 
 
   return (
-    <form className="uppercase max-w-md md:ms-0 md:max-w-none justify-start rounded-md md:p-4 m-2 flex md:flex-row flex-col w-full">
-      <div className="flex md:flex-row flex-col  font-semibold items-center justify-center">
+    <form className="uppercase max-w-md md:ms-0 md:max-w-none justify-start rounded-md md:p-4 m-2 flex md:flex-row mx-auto flex-col w-full">
+      <div className="flex md:flex-row flex-col md:justify-between  font-semibold items-center justify-center">
 
 
         <button
