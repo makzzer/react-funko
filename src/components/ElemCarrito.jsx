@@ -35,7 +35,7 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
           <h1 className="text-red-600 pe-2">Cantidad: {cantidad}</h1>
         </div>
         <div>
-          <h1>Precio: {precio}</h1>
+          <h1>Precio: ${precio}</h1>
         </div>
       </div>
     </form>
