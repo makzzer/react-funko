@@ -6,13 +6,13 @@ const Footer = () => {
         <div className="bg-gray-900 shadow-md relative mx-auto pt-1 md:pt-4 pb-0 md:py-2 md:pb-4 bottom-0 w-full left-0">
 
 
-        <footer className="bg-gray-900 pb-2 justify-center items-center px-20 text-white container max-w-6xl mx-auto flex flex-col md:flex-row">
+        <footer className="bg-gray-900 pb-2 justify-center w-full items-center  text-white container max-w-6xl mx-auto flex flex-col md:flex-row">
 
             {/*div con 2 elem: navbar y logo*/}
-            <div className="flex flex-row container items-center justify-between  mx-auto max-w-screen-2xl py-2">
+            <div className="flex md:flex-row flex-col container items-center justify-between  mx-auto max-w-screen-2xl py-2">
 
-                {/*div con navbar*/}
-                <div className="flex justify-between gap-4 mb-1 md:mb-0">
+                {/*div con logos*/}
+                <div className=" flex justify-between gap-4 mb-1 md:mb-0">
                 <ion-icon name={"logo-instagram"} size="large"></ion-icon>
                 <ion-icon name="logo-facebook" size="large"></ion-icon>
                 <ion-icon name="logo-twitter" size="large"></ion-icon>
