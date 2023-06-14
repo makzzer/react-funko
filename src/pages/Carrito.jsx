@@ -78,7 +78,7 @@ const Carrito = () => {
       {carrito.length > 0 && (
         <div className="items-center flex justify-start">
           <button
-            className="py-2  bg-red-700 rounded-lg text-lg hover:bg-red-600 px-2 m-2 text-md font-semibold text-white"
+            className="py-2  bg-red-700 rounded-lg md:text-lg text-md hover:bg-red-600 px-2 m-2 text-md font-semibold text-white"
             onClick={() => {
               vaciarCarrito();
               window.scrollTo(0, 0);
