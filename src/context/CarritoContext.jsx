@@ -27,10 +27,9 @@ const CarritoProvider = ({ children }) => {
 
     console.log("existe o nooo" + existeElementoEnCarrito);
 
-    
     if (!existeElementoEnCarrito) {
       console.log("no existe lo agrego");
-      setCarrito([...carrito,{...item, cantidad:1}])
+      setCarrito([...carrito, { ...item, cantidad: 1 }]);
       //console.log(item.cantidad)
     } else {
       //const carritoActualizado = carrito.map((elem) => elem.id === item.id)
@@ -39,18 +38,12 @@ const CarritoProvider = ({ children }) => {
 
       //recorro el carrito y le actualizo la cantidad al elemento que agregué
 
-      const carritoActualizado = carrito.map ((elem) => elem.id === item.id
-      ? {...elem, cantidad: elem.cantidad + 1}
-      : elem)
-      setCarrito(carritoActualizado)
+      const carritoActualizado = carrito.map((elem) =>
+        elem.id === item.id ? { ...elem, cantidad: elem.cantidad + 1 } : elem
+      );
+      setCarrito(carritoActualizado);
     }
-    
   };
-
-
-
-
-  
 
   //borrar carrito lo uso en Carrito
   const vaciarCarrito = () => {
@@ -72,6 +65,14 @@ const CarritoProvider = ({ children }) => {
     return total;
   };
 
+  const totalElementosCarrito = () => {
+    let total = 0;
+    carrito.forEach((element) => {
+      total += element.cantidad;
+    });
+    return total;
+  };
+
   return (
     <CarritoContext.Provider
       value={{
@@ -81,6 +82,7 @@ const CarritoProvider = ({ children }) => {
         vaciarCarrito,
         totalCarrito,
         eliminarElementoCarrito,
+        totalElementosCarrito,
       }}
     >
       {children}

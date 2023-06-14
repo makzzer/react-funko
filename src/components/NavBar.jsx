@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import IconLogo from "./icons/IconLogo";
-import IconCarrito from "./icons/IconCarrito";
 import { NavLink } from "react-router-dom";
 import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
+import {useCarritoContext} from "../context/CarritoContext";
 
 const Nav = () => {
   //variable que uso para ver si la barra está presionada
   let [open, setOpen] = useState(false);
+
+  const { totalElementosCarrito } = useCarritoContext();
 
   const esPantallaMobile = DetectarTamañoPantalla();
 
@@ -35,6 +37,7 @@ const Nav = () => {
   const cambiarMenuAFalse = () => {
     setOpen(false);
   };
+
 
   return (
     <>
@@ -70,6 +73,11 @@ const Nav = () => {
             className="text-3xl gap-4 absolute right-14 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
           >
             <ion-icon name="cart-outline"></ion-icon>
+            {totalElementosCarrito() >= 0 && (
+              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                {totalElementosCarrito()}
+              </span>
+            )}
           </NavLink>
 
           <div>
@@ -78,7 +86,7 @@ const Nav = () => {
                 open ? "top-14 " : "top-[-490px]"
               }`}
             >
-              {navlinks.map((navlink, index) => {
+              {navlinks.map((navlink) => {
                 return (
                   <>
                     <li
