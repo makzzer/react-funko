@@ -23,8 +23,7 @@ const CarritoProvider = ({ children }) => {
     console.log(item.id);
     const existeElementoEnCarrito = carrito.some((elem) => elem.id === item.id);
 
-    //si existe el producto en el carrito , le aumento el contador de cantidad pero no lo agrego
-
+    //si existe el producto en el carrito, le aumento el contador de cantidad pero no lo agrego
     console.log("existe o nooo" + existeElementoEnCarrito);
 
     if (!existeElementoEnCarrito) {
@@ -37,7 +36,6 @@ const CarritoProvider = ({ children }) => {
       console.log("ya existe en el carrito no lo agrego");
 
       //recorro el carrito y le actualizo la cantidad al elemento que agregué
-
       const carritoActualizado = carrito.map((elem) =>
         elem.id === item.id ? { ...elem, cantidad: elem.cantidad + 1 } : elem
       );
@@ -65,6 +63,21 @@ const CarritoProvider = ({ children }) => {
     return total;
   };
 
+  //actualizar cantidad de productos comprados
+  const actualizarCantidad = (id, cantidadNueva) => {
+    if (cantidadNueva <1 ) {
+      return;
+    }
+    const carritoActualizado = carrito.map((elem) => {
+      if (elem.id === id) {
+        return { ...elem, cantidad: cantidadNueva };
+      }
+      return elem;
+    });
+    setCarrito(carritoActualizado);
+  };
+
+  //contador de elementos totales del carrito para el span del nav
   const totalElementosCarrito = () => {
     let total = 0;
     carrito.forEach((element) => {
@@ -83,6 +96,7 @@ const CarritoProvider = ({ children }) => {
         totalCarrito,
         eliminarElementoCarrito,
         totalElementosCarrito,
+        actualizarCantidad,
       }}
     >
       {children}

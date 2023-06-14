@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { useCarritoContext } from "../context/CarritoContext";
 import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
 
 const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
-  const { eliminarElementoCarrito } = useCarritoContext();
+  const { eliminarElementoCarrito,actualizarCantidad } = useCarritoContext();
+
+  const [cantidadModificada, setCantidadModificada] = useState(cantidad)
 
   const esPantallaMobile = DetectarTamañoPantalla();
 
@@ -40,23 +43,24 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
 
 
           
-          <div className="md:min-w-[16rem] md:flex items-center justify-center">
+          <div className="md:min-w-[16rem] md:flex md:pe-4 items-center justify-center">
             <label htmlFor="cantidad" className="text-red-600 pr-2">
               {esPantallaMobile && "Cantidad:"}
             </label>
             <input
               type="number"
-              id="cantidad"
-              value={cantidad}
+              id={`cantidad-${id}`}
+              value={cantidadModificada}
               className="w-12 md:w-14 text-center md:ps-3 ps-1 text-red-700 md:px-0 px-2  py-1 border border-gray-300 rounded-md focus:outline-none focus:border-red-600"
-              readOnly
+              //onChange={(e) => actualizarCantidad(id,parseInt(e.target.value))}
+              onBlur={cantidadModificada===0 && setCantidadModificada(1)}
             />
           </div>
 
 
 
 
-          <div className="md:min-w-[16rem] text-center md:justify-end items-center flex  ">
+          <div className="md:min-w-[16rem] text-center md:justify-end items-center flex md:ms-3 ">
             {!esPantallaMobile ? (
               <h1 className="items-start ">${precio*cantidad}</h1>
             ) : (

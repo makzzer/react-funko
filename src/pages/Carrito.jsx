@@ -62,12 +62,9 @@ const Carrito = () => {
 
           <li className="flex p-4 font-semibold items-center justify-end gap-2 text-lg">
             <div className="items-center flex justify-cen">
-              <button
-                className="py-2  bg-red-700 rounded-lg  hover:bg-red-600 px-2 m-2 text-md font-semibold md: text-white"
-                
-              >
-                Actualizar
-              </button>
+              <NavLink to="/shop" className="py-2  bg-red-700 rounded-lg  hover:bg-red-600 px-2 m-2 text-md font-semibold md: text-white">
+                Volver al Shop
+              </NavLink>
             </div>
             <div className="w-1/8 t">Total:</div>
             <div className="w-1/8 text-red-700">${totalCarrito()}</div>
@@ -75,8 +72,9 @@ const Carrito = () => {
         </ul>
       )}
 
+      {/*agregarle flex al primer div siguiente*/}
       {carrito.length > 0 && (
-        <div className="items-center flex justify-start">
+        <div className="items-center  justify-start hidden">
           <button
             className="py-2  bg-red-700 rounded-lg md:text-lg text-md hover:bg-red-600 px-2 m-2 text-md font-semibold text-white"
             onClick={() => {
