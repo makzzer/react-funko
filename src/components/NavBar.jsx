@@ -59,7 +59,7 @@ const Nav = () => {
 
           <div
             onClick={() => setOpen(!open)}
-            className="text-3xl gap-4 absolute right-14 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
+            className="text-3xl gap-4 absolute right-4 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
           >
             <ion-icon name={open ? "close" : "menu"}></ion-icon>
           </div>
@@ -67,7 +67,7 @@ const Nav = () => {
           <NavLink
             to={"/carrito"}
             onClick={() => setOpen(false)}
-            className="text-3xl gap-4 absolute right-4 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
+            className="text-3xl gap-4 absolute right-14 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
           >
             <ion-icon name="cart-outline"></ion-icon>
           </NavLink>
