@@ -109,7 +109,7 @@ const Nav = () => {
   className="text-3xl gap-4 transition hover:-translate-y-1 hover:scale-95 hover:bg-red-500 duration-300 text-red-800 cursor-pointer ps-1 pt-3 relative"
 >
   <ion-icon name="cart-outline"></ion-icon>
-  {totalElementosCarrito() > 0 && (
+  {totalElementosCarrito() >= 0 && (
     <span className="absolute top-1 right-0 -mt-2 -mr-2 inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-red-100 bg-red-600 rounded-full">
       {totalElementosCarrito()}
     </span>
