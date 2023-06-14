@@ -1,7 +1,14 @@
+
+import Underconstruction from "../components/UnderConstruction"
+
 const Contacto = () => {
   return (
     <>
-        <h1 className="text-5xl min-h-screen mt-20 text-center pt-12">contacto</h1>
+      <div className="flex container mx-auto min-h-screen items-start m-20 text-center">
+       
+        <Underconstruction/>
+
+      </div>
     </>
   );
 };
