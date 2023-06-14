@@ -48,7 +48,7 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
               type="number"
               id="cantidad"
               value={cantidad}
-              className="w-10 text-center md:ps-3 text-red-700 md:px-0 px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:border-red-600"
+              className="w-12 md:w-14 text-center md:ps-3 ps-1 text-red-700 md:px-0 px-2  py-1 border border-gray-300 rounded-md focus:outline-none focus:border-red-600"
               readOnly
             />
           </div>
@@ -58,11 +58,11 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
 
           <div className="md:min-w-[16rem] text-center md:justify-end items-center flex  ">
             {!esPantallaMobile ? (
-              <h1 className="items-start ">${precio}</h1>
+              <h1 className="items-start ">${precio*cantidad}</h1>
             ) : (
               <>
                 <h1 className="items-start me-2">Precio:</h1>
-                <h1 className="items-start ">{precio}</h1>
+                <h1 className="items-start ">${precio*cantidad}</h1>
               </>
             )}
           </div>

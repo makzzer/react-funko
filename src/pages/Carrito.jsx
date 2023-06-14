@@ -64,10 +64,7 @@ const Carrito = () => {
             <div className="items-center flex justify-cen">
               <button
                 className="py-2  bg-red-700 rounded-lg  hover:bg-red-600 px-2 m-2 text-md font-semibold md: text-white"
-                onClick={() => {
-                  vaciarCarrito();
-                  window.scrollTo(0, 0);
-                }}
+                
               >
                 Actualizar
               </button>
