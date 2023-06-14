@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="bg-gray-900 shadow-md relative mx-auto pt-1 md:pt-4 pb-0 md:py-2 md:pb-4 bottom-0 w-full left-0">
 
 
-        <footer className="bg-gray-900 pb-2 justify-center w-full items-center  text-white container max-w-6xl mx-auto flex flex-col md:flex-row">
+        <footer className="bg-gray-900 pb-2 justify-center  items-center  text-white container  mx-auto flex flex-col md:flex-row">
 
             {/*div con 2 elem: navbar y logo*/}
             <div className="flex md:flex-row flex-col container items-center justify-between  mx-auto max-w-screen-2xl py-2">

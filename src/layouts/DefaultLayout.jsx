@@ -17,7 +17,7 @@ const DefaultLayout = () => {
           <Outlet />
         </main>
 
-        <div className="">
+        <div >
           <Footer />
         </div>
       </div>
