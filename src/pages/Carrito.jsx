@@ -23,13 +23,13 @@ const Carrito = () => {
   return (
 
 
-    <div className="min-h-screen mx-auto max-w-6xl text-center items-center flex-col mt-10 md:mt-20">
-      <h1 className="text-4xl md:text-6xl pb-4 mt-22 pt-14">Carrito</h1>
+    <div className="transition-all duration-700 min-h-screen mx-auto max-w-6xl text-center items-center flex-col mt-10 md:mt-20">
+      <h1 className="text-4xl md:text-6xl pb-4 mt-22 pt-14 font-mono">Carrito</h1>
 
       {carrito.length === 0 ? (
         <>
         <h1 className="text-2xl text-red-700 mb-4">Tu carrito está vacío</h1>
-        <NavLink to={"/shop"} className="m-2 p-2 bg-red-700 rounded-lg text-lg hover:bg-red-600 text-white">Ir al Shop</NavLink>
+        <NavLink to={"/shop"} className="m-2 p-2 bg-red-800 rounded-lg text-lg hover:bg-red-600 text-white">Ir al Shop</NavLink>
         </>
       ) : (
         <ul className="border rounded-md divide-y md:m-0 m-2">

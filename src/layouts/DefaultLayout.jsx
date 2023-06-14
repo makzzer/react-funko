@@ -8,7 +8,7 @@ const DefaultLayout = () => {
   return (
     <>
       <ScrollTop />
-      <div className="">
+      <div className="transition-all duration-500">
         <header>
           <NavBar />
         </header>

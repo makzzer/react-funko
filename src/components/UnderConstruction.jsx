@@ -4,7 +4,7 @@ import IconoLogotipoSimple from "../components/icons/IconLogotipoSimple";
 const UnderConstruction = ({ mensaje }) => {
   return (
     <>
-      <div className=" flex md:flex-row flex-col justify-center gap-6 items-center md:mx-0 mx-2 md:text-5xl text-4xl container font-mono font-bold bg-gray-900   mt-20 pb-10 pt-12">
+      <div className="transition-all duration-700 flex md:flex-row flex-col justify-center gap-6 items-center md:mx-0 mx-2 md:text-5xl text-4xl container font-mono font-bold bg-gray-900  mt-5 md:mt-20 pb-10 pt-12">
         
         <h1 className="text-white  ">{mensaje}</h1>
 
