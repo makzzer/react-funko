@@ -16,7 +16,7 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
     //ahora voy a crear la parte de sweet alert
     const resultadoUsuario = await swal({
       icon: "warning",
-      title: "¿Está seguro que desea quitar el elemento del carrito?",
+      title: "¿Está seguro que desea eliminar el producto del carrito?",
       buttons: {
         cancel: "Cancelar",
         confirm: "Confirmar",
@@ -33,7 +33,7 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
     if (cantidadModificada <= 1) {
       const resultadoUsuario = await swal({
         icon: "warning",
-        title: "¿Está seguro que desea quitar el elemento del carrito?",
+        title: "¿Está seguro que desea eliminar el producto del carrito?",
         buttons: {
           cancel: "Cancelar",
           confirm: "Confirmar",
