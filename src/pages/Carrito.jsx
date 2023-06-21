@@ -37,6 +37,9 @@ const Carrito = () => {
         </>
       ) : (
         <ul className="border rounded-md divide-y md:m-0 m-2">
+          
+          
+          
           <li
             className={`flex items-center p-4 font-semibold ${
               esPantallaMobile && "hidden"

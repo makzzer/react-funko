@@ -13,16 +13,21 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
   const eliminarElemento = (e) => {
     e.preventDefault();
     eliminarElementoCarrito(id);
-    console.log(id);
   };
 
   //restar elemento del carrito, usa el hook del context useCarritoContext
+  //acá veo si la cantidad que voy modificando es menor o igual a 1 entonces elimino el producto directamente
+  //sino le resto 1 simplemente
   const restarElementoCarrito = (e) => {
     e.preventDefault();
-    console.log("estoy en el metdodo y el id es " + id);
-    restarElemento(id);
-    setCantidadModificada(cantidadModificada - 1);
+    if (cantidadModificada <= 1) {
+      eliminarElementoCarrito(id);
+    } else {
+      restarElemento(id);
+      setCantidadModificada(cantidadModificada - 1);
+    }
   };
+  
 
   //sumar elemento del carrito, usa el hook del context useCarritoContext
   const sumarElementoCarrito = (e) => {
@@ -96,6 +101,7 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
                 type="number"
                 id={`cantidad-${id}`}
                 value={cantidadModificada}
+                readOnly
                 className="w-12 md:w-14 text-center md:ps-3 ps-1 text-red-700 md:px-0 px-2  py-1 border border-gray-300 rounded-md focus:outline-none focus:border-red-600"
                 //onChange={(e) => actualizarCantidad(id,parseInt(e.target.value))}
                 onBlur={cantidadModificada === 0 && setCantidadModificada(1)}
