@@ -65,7 +65,7 @@ const CarritoProvider = ({ children }) => {
 
   //actualizar cantidad de productos comprados
   const actualizarCantidad = (id, cantidadNueva) => {
-    if (cantidadNueva <1 ) {
+    if (cantidadNueva < 1) {
       return;
     }
     const carritoActualizado = carrito.map((elem) => {
@@ -76,6 +76,33 @@ const CarritoProvider = ({ children }) => {
     });
     setCarrito(carritoActualizado);
   };
+
+
+
+    //agregar 1 elemento del carrito para sumar 1 a la cantidad del producto
+    const sumarElemento = (id) => {
+      const carritoActu = carrito.map((elem) => {
+        if (elem.id === id) {
+          const nuevaCantidad = elem.cantidad + 1;
+          return { ...elem, cantidad: nuevaCantidad };
+        }
+        return elem;
+      });
+      setCarrito(carritoActu);
+    };
+
+
+    //quitar 1 elemento del carrito para restar 1 a la cantidad del producto
+    const restarElemento = (id) => {
+          const carritoActu = carrito.map((elem) => {
+            if (elem.id === id) {
+              const nuevaCantidad = elem.cantidad - 1;
+              return { ...elem, cantidad: nuevaCantidad };
+            }
+            return elem;
+          });
+          setCarrito(carritoActu);
+        };
 
   //contador de elementos totales del carrito para el span del nav
   const totalElementosCarrito = () => {
@@ -97,6 +124,8 @@ const CarritoProvider = ({ children }) => {
         eliminarElementoCarrito,
         totalElementosCarrito,
         actualizarCantidad,
+        restarElemento,
+        sumarElemento,
       }}
     >
       {children}

@@ -3,7 +3,8 @@ import { useCarritoContext } from "../context/CarritoContext";
 import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
 
 const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
-  const { eliminarElementoCarrito, actualizarCantidad } = useCarritoContext();
+  const { eliminarElementoCarrito, restarElemento, sumarElemento } =
+    useCarritoContext();
 
   const [cantidadModificada, setCantidadModificada] = useState(cantidad);
 
@@ -15,10 +16,27 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
     console.log(id);
   };
 
+  //restar elemento del carrito, usa el hook del context useCarritoContext
+  const restarElementoCarrito = (e) => {
+    e.preventDefault();
+    console.log("estoy en el metdodo y el id es " + id);
+    restarElemento(id);
+    setCantidadModificada(cantidadModificada - 1);
+  };
+
+  //sumar elemento del carrito, usa el hook del context useCarritoContext
+  const sumarElementoCarrito = (e) => {
+    e.preventDefault();
+    console.log("estoy en el metdodo y el id es " + id);
+    sumarElemento(id);
+    setCantidadModificada(cantidadModificada + 1);
+  };
+
   return (
     <div className="border-b border-gray-300">
       <form className="uppercase max-w-md md:ms-0 md:max-w-none rounded-md md:p-4 m-2 flex md:flex-row justify-between mx-auto flex-col w-full">
         <div className="flex md:flex-row flex-col md:justify-between  font-semibold items-center justify-center">
+          {/*Primer boton, el que elimina todo el articulo*/}
           <button
             className="ml-auto md:ml-0 z-0 cursor-pointer md:me-8"
             onClick={eliminarElemento}
@@ -44,6 +62,7 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
           {/**este es el div que tiene los botones y la cantidad */}
           <div className="md:min-w-[16rem] md:flex md:pe-4  flex flex-row items-center justify-center">
             <button
+              onClick={restarElementoCarrito}
               className={`py-2 bg-red-700 min-w-[20px] rounded-lg md:text-lg text-md hover:bg-red-600 px-1 m-1 text-md font-semibold text-white ${
                 esPantallaMobile && "hidden"
               }`}
@@ -57,13 +76,15 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
 
             {/*este div tiene el input de la cantidad y el label*/}
             <div className="">
-              <label htmlFor="cantidad" className="text-red-600 hidden ">
-               
-              </label>
+              <label
+                htmlFor="cantidad"
+                className="text-red-600 hidden "
+              ></label>
 
-            {/**este es el boton - pero de responsive despues del label de cantidad */}
-             
+              {/**este es el boton - pero de responsive despues del label de cantidad */}
+
               <button
+                onClick={restarElementoCarrito}
                 className={`py-2 bg-red-700 min-w-[20px] md:hidden rounded-lg md:text-lg text-md hover:bg-red-600 px-1 m-1 text-md font-semibold text-white ${
                   !esPantallaMobile && "hidden"
                 }`}
@@ -78,11 +99,15 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
                 className="w-12 md:w-14 text-center md:ps-3 ps-1 text-red-700 md:px-0 px-2  py-1 border border-gray-300 rounded-md focus:outline-none focus:border-red-600"
                 //onChange={(e) => actualizarCantidad(id,parseInt(e.target.value))}
                 onBlur={cantidadModificada === 0 && setCantidadModificada(1)}
+                onChange={(e) =>
+                  setCantidadModificada(parseInt(e.target.value))
+                }
               />
             </div>
 
             {/**boton + */}
             <button
+              onClick={sumarElementoCarrito}
               className="py-2  bg-red-700 min-w-[20px] rounded-lg md:text-lg text-md hover:bg-red-600 px-1 m-1 text-md font-semibold text-white"
               //onClick={() => {
               //vaciarCarrito();
@@ -99,7 +124,9 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
             ) : (
               <>
                 <h1 className="items-start me-2">Precio:</h1>
-                <h1 className="items-start text-red-800 ">${precio * cantidad}</h1>
+                <h1 className="items-start text-red-800 ">
+                  ${precio * cantidad}
+                </h1>
               </>
             )}
           </div>
