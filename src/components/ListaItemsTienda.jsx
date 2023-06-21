@@ -11,9 +11,8 @@ const ListaItemsTienda = ({ elementosLand }) => {
     {elementosLand.map((elem) => (
         
         <>
-        <div className="">
+        <div key={elem.id}>
           <ItemTienda
-            key={elem.id}
             title={elem.title}
             description={elem.description}
             img={elem.img}
