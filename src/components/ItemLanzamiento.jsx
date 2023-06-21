@@ -21,6 +21,10 @@ const ItemLanzamiento = ({
 
   //logica agregada para comprar articulo, se lo paso desde acá completo y lo labura mi hook del context
   const comprarArticulo = (id) =>{
+    swal({
+      icon: "success",
+      text: "Producto agregado al carrito"
+    });
     const item = {
       id,
       title,

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useCarritoContext } from "../context/CarritoContext";
 import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
+import swal from "sweetalert";
 
 const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
   const { eliminarElementoCarrito, restarElemento, sumarElemento } =
@@ -10,24 +11,41 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
 
   const esPantallaMobile = DetectarTamañoPantalla();
 
-  const eliminarElemento = (e) => {
+  const eliminarElemento = async (e) => {
     e.preventDefault();
-    eliminarElementoCarrito(id);
+    //ahora voy a crear la parte de sweet alert
+    const resultadoUsuario = await swal({
+      icon: "warning",
+      title: "¿Está seguro que desea quitar el elemento del carrito?",
+      buttons: {
+        cancel: "Cancelar",
+        confirm: "Confirmar",
+      },
+    });
+    resultadoUsuario && eliminarElementoCarrito(id);
   };
 
   //restar elemento del carrito, usa el hook del context useCarritoContext
   //acá veo si la cantidad que voy modificando es menor o igual a 1 entonces elimino el producto directamente
   //sino le resto 1 simplemente
-  const restarElementoCarrito = (e) => {
+  const restarElementoCarrito = async (e) => {
     e.preventDefault();
     if (cantidadModificada <= 1) {
-      eliminarElementoCarrito(id);
+      const resultadoUsuario = await swal({
+        icon: "warning",
+        title: "¿Está seguro que desea quitar el elemento del carrito?",
+        buttons: {
+          cancel: "Cancelar",
+          confirm: "Confirmar",
+        },
+      });
+      resultadoUsuario && eliminarElementoCarrito(id);
+      return
     } else {
       restarElemento(id);
       setCantidadModificada(cantidadModificada - 1);
     }
   };
-  
 
   //sumar elemento del carrito, usa el hook del context useCarritoContext
   const sumarElementoCarrito = (e) => {
