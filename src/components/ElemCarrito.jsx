@@ -102,7 +102,7 @@ const ElemCarrito = ({ id, title, precio, img, cantidad }) => {
                 id={`cantidad-${id}`}
                 value={cantidadModificada}
                 readOnly
-                className="w-12 md:w-14 text-center md:ps-3 ps-1 text-red-700 md:px-0 px-2  py-1 border border-gray-300 rounded-md focus:outline-none focus:border-red-600"
+                className="w-12 md:w-14 text-center ps-1 text-red-700 md:px-0 px-2  py-1 border border-gray-300 rounded-md focus:outline-none focus:border-red-600"
                 //onChange={(e) => actualizarCantidad(id,parseInt(e.target.value))}
                 onBlur={cantidadModificada === 0 && setCantidadModificada(1)}
                 onChange={(e) =>
