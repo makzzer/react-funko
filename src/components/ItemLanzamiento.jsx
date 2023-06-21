@@ -23,7 +23,7 @@ const ItemLanzamiento = ({
   const comprarArticulo = (id) =>{
     swal({
       icon: "success",
-      text: "Producto agregado al carrito"
+      title: "¡Producto agregado al carrito!"
     });
     const item = {
       id,
