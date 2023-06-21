@@ -37,9 +37,6 @@ const Carrito = () => {
         </>
       ) : (
         <ul className="border rounded-md divide-y md:m-0 m-2">
-          
-          
-          
           <li
             className={`flex items-center p-4 font-semibold ${
               esPantallaMobile && "hidden"
@@ -50,28 +47,35 @@ const Carrito = () => {
             <div className="w-1/3">Precio</div>
           </li>
 
-          {carrito.map((elem) => (
-            elem.cantidad != 0
-            && <li className="p-0 m-2 md:m-0">
-              <ElemCarrito
-                key={elem.id}
-                id={elem.id}
-                title={elem.title}
-                precio={elem.precio}
-                img={elem.img}
-                cantidad={elem.cantidad}
-              />
-            </li>
-          ))}
+          {carrito.map(
+            (elem) =>
+              elem.cantidad != 0 && (
+                <li className="p-0 m-2 md:m-0">
+                  <ElemCarrito
+                    key={elem.id}
+                    id={elem.id}
+                    title={elem.title}
+                    precio={elem.precio}
+                    img={elem.img}
+                    cantidad={elem.cantidad}
+                  />
+                </li>
+              )
+          )}
 
-          <li className="flex p-4 font-semibold items-center justify-end gap-2 text-lg">
-            <div className="items-center flex justify-cen">
-              <NavLink to="/shop" className="py-2  bg-red-700 rounded-lg  hover:bg-red-600 px-2 m-2 text-md font-semibold md: text-white">
+          <li className="flex p-4 font-semibold items-center md:justify-end justify-between gap-2 md:text-lg">
+            <div className="items-center flex justify-center">
+              <NavLink
+                to="/shop"
+                className="py-2 bg-red-700 rounded-lg  hover:bg-red-600 px-2 m-2 text-md font-semibold md: text-white"
+              >
                 Volver al Shop
               </NavLink>
             </div>
-            <div className="w-1/8 t">Total:</div>
-            <div className="w-1/8 text-red-700">${totalCarrito()}</div>
+            <div className="flex gap-1">
+              <div className="w-1/8 t">Total:</div>
+              <div className="w-1/8 text-red-700">${totalCarrito()}</div>
+            </div>
           </li>
         </ul>
       )}
