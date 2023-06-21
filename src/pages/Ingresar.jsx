@@ -19,7 +19,7 @@ const Ingresar = () => {
             <IconLogoSimple ancho={100} alto={100} />
           )}
         </div>
-        <h1 className="text-2xl md:text-3xl"> Sign in to Funko</h1>
+        <h1 className="text-2xl font-semibold md:text-3xl text-gray-800 md:p-4"> Sign in to Funko</h1>
 
         <div>
           <SignIn />
