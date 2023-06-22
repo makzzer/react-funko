@@ -8,7 +8,8 @@ import Contacto from "../pages/Contacto";
 import { elementosLanding, nuevosLanzamientos, grillaShop } from "../App";
 import DefaultLayout from "../layouts/DefaultLayout";
 import Carrito from "../pages/Carrito";
-
+import PrivateLayout from "../layouts/PrivateLayout";
+import DashboardUser from "../pages/DashboardUser";
 
 //voy a usar un layout y dentro de ese layout un objeto con todas las paginas como main del layout, eso lo hago con <Outlet/>
 
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/shop",
-        element: <Shop grillaShop={grillaShop}/>,
+        element: <Shop grillaShop={grillaShop} />,
       },
       {
         path: "/ingresar",
@@ -44,7 +45,13 @@ export const router = createBrowserRouter([
       {
         path: "/carrito",
         element: <Carrito />,
-      }
+      },
+
+      {
+        path: "/dashboarduser",
+        element: <PrivateLayout />,
+        children: [{ index: true, element: <DashboardUser /> }],
+      },
     ],
   },
 ]);

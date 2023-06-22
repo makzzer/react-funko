@@ -10,9 +10,9 @@ const Carrito = () => {
   const { carrito, vaciarCarrito, totalCarrito } = useCarritoContext();
 
   // llamo al userContext para ver si lo toma
-  const { user } = useUserContext();
+ // const { user } = useUserContext();
 
-  console.log("el usuario del context es" + user + "y estoy en el carrito paa");
+ 
 
   //metodo que traigo de otro componente para ver si estoy en pantalla pequeña
   const esPantallaMobile = DetectarTamañoPantalla();
