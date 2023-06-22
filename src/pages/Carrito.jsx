@@ -3,10 +3,16 @@ import ElemCarrito from "../components/ElemCarrito";
 import { useEffect } from "react";
 import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
 import { NavLink } from "react-router-dom";
+import { useUserContext } from "../context/UserContext";
 
 const Carrito = () => {
   //desestructuro desde m context los metodos y el array de carrito para usarlo en este componente
   const { carrito, vaciarCarrito, totalCarrito } = useCarritoContext();
+
+  // llamo al userContext para ver si lo toma
+  const { user } = useUserContext();
+
+  console.log("el usuario del context es" + user + "y estoy en el carrito paa");
 
   //metodo que traigo de otro componente para ver si estoy en pantalla pequeña
   const esPantallaMobile = DetectarTamañoPantalla();
@@ -27,10 +33,12 @@ const Carrito = () => {
 
       {carrito.length === 0 ? (
         <>
-        <div className="bg-gray-900 p-4 mb-6 mx-2">
-        <h1 className="md:text-4xl text-2xl text-bold text-red-700 mb-4">Tu carrito está vacío</h1>
-        </div>
-          
+          <div className="bg-gray-900 p-4 mb-6 mx-2">
+            <h1 className="md:text-4xl text-2xl text-bold text-red-700 mb-4">
+              Tu carrito está vacío
+            </h1>
+          </div>
+
           <NavLink
             to={"/shop"}
             className="m-2 p-2 bg-red-800 rounded-lg text-lg hover:bg-red-600 text-white"

@@ -7,8 +7,9 @@ const UserContext = createContext();
 //creo el context provider con una exportacion por defecto para que los demas componentes puedan modificar el objeto que creé antes
 const UserContextProvider = ({ children }) => {
   //inicializo el estado del usuario como false "deslogueado"
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
 
+  //recordar tambien envolver todo el componente router del main.jsx porque sino no va a funcionar
   return (
     <UserContext.Provider value={{ user, setUser }}>
       {/*este children que sigue representa a todas las paginas que despues van a acceder a mi context*/}
