@@ -1,5 +1,15 @@
+import UnderConstruction from "../components/UnderConstruction";
+
 const DashboardUser = () => {
-  return <h1 className="mt-20 text-3xl font-bold">DashboardUser</h1>;
+  const mensaje = "Hola Soy el Dashboard Privado";
+
+  return (
+    <>
+      <div className="flex container mx-auto min-h-screen items-start m-20 text-center">
+        <UnderConstruction mensaje={mensaje} />;
+      </div>
+    </>
+  );
 };
 
 export default DashboardUser;
