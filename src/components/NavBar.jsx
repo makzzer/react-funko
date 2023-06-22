@@ -3,10 +3,13 @@ import IconLogo from "./icons/IconLogo";
 import { NavLink } from "react-router-dom";
 import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
 import { useCarritoContext } from "../context/CarritoContext";
+import { useUserContext } from "../context/UserContext";
 
 const Nav = () => {
   //variable que uso para ver si la barra está presionada
   let [open, setOpen] = useState(false);
+
+  const { user } = useUserContext();
 
   const { totalElementosCarrito } = useCarritoContext();
 
@@ -30,6 +33,11 @@ const Nav = () => {
     {
       name: "INGRESAR",
       to: "/ingresar",
+      classname: clasesita,
+    },
+    {
+      name: "DASHBOARD",
+      to: "/dashboarduser",
       classname: clasesita,
     },
   ];
@@ -71,7 +79,7 @@ const Nav = () => {
             onClick={() => setOpen(false)}
             className="text-3xl gap-4 absolute right-16 text-red-800 top-7 cursor-pointer ps-2 md:hidden"
           >
-            <ion-icon name="cart-outline" ></ion-icon>
+            <ion-icon name="cart-outline"></ion-icon>
             {totalElementosCarrito() >= 0 && (
               <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
                 {totalElementosCarrito()}
@@ -85,37 +93,45 @@ const Nav = () => {
                 open ? "top-14 " : "top-[-490px]"
               }`}
             >
-              {navlinks.map((navlink) => {
-                return (
-                  <>
-                    <li
-                      key={navlink.name}
-                      className="bg-gray-900 text-xl md:my-0 my-7 pt-2"
-                    >
-                      <NavLink
-                        to={navlink.to}
-                        className={navlink.classname}
-                        onClick={cambiarMenuAFalse}
+              {navlinks
+                .filter((navlink) => {
+                  if (user) {
+                    return !(navlink.name === "INGRESAR");
+                  } else {
+                    return !(navlink.name === "DASHBOARD");
+                  }
+                })
+                .map((navlink) => {
+                  return (
+                    <>
+                      <li
+                        key={navlink.name}
+                        className="bg-gray-900 text-xl md:my-0 my-7 pt-2"
                       >
-                        {navlink.name}
-                      </NavLink>
-                    </li>
-                  </>
-                );
-              })}
+                        <NavLink
+                          to={navlink.to}
+                          className={navlink.classname}
+                          onClick={cambiarMenuAFalse}
+                        >
+                          {navlink.name}
+                        </NavLink>
+                      </li>
+                    </>
+                  );
+                })}
+
               {!esPantallaMobile && (
                 <NavLink
-  to={"/carrito"}
-  className="text-3xl gap-4 transition hover:-translate-y-1 hover:scale-95 hover:bg-red-500 duration-300 text-red-800 cursor-pointer ps-1 pt-3 relative"
->
-  <ion-icon name="cart-outline"></ion-icon>
-  {totalElementosCarrito() >= 0 && (
-    <span className="absolute top-1 right-0 -mt-2 -mr-2 inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-red-100 bg-red-600 rounded-full">
-      {totalElementosCarrito()}
-    </span>
-  )}
-</NavLink>
-
+                  to={"/carrito"}
+                  className="text-3xl gap-4 transition hover:-translate-y-1 hover:scale-95 hover:bg-red-500 duration-300 text-red-800 cursor-pointer ps-1 pt-3 relative"
+                >
+                  <ion-icon name="cart-outline"></ion-icon>
+                  {totalElementosCarrito() >= 0 && (
+                    <span className="absolute top-1 right-0 -mt-2 -mr-2 inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-red-100 bg-red-600 rounded-full">
+                      {totalElementosCarrito()}
+                    </span>
+                  )}
+                </NavLink>
               )}
             </ul>
           </div>
