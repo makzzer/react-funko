@@ -27,7 +27,10 @@ const Carrito = () => {
 
       {carrito.length === 0 ? (
         <>
-          <h1 className="text-2xl text-red-700 mb-4">Tu carrito está vacío</h1>
+        <div className="bg-gray-900 p-4 mb-6 mx-2">
+        <h1 className="md:text-4xl text-2xl text-bold text-red-700 mb-4">Tu carrito está vacío</h1>
+        </div>
+          
           <NavLink
             to={"/shop"}
             className="m-2 p-2 bg-red-800 rounded-lg text-lg hover:bg-red-600 text-white"
