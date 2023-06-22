@@ -1,23 +1,40 @@
-import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
+import { useState } from "react";
+import { login } from "../config/firebase";
+import { useRedireccionarUserActivo } from "../hooks/useRedireccionarUserActivo";
 
 const SignIn = () => {
-  const { user, setUser } = useUserContext();
+  const { user } = useUserContext();
 
-  const navigate = useNavigate();
+  //este hook que hice redirige al usuario a una ruta si es distinto de null osea si logueo correcto
+  useRedireccionarUserActivo(user, "/dashboarduser");
 
-  console.log("el estado de user es:   " + user);
+  //creo mis estados de email y password, despues les voy a setear los ingresados
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const inciarSesion = (e) => {
+  const handleIniciarSesion = async (e) => {
     e.preventDefault();
-    setUser(true);
-    navigate("/dashboarduser")
+    console.log("me diste al submit pa");
+
+    try {
+      //lo mando a la funcion de login de firebase.js
+      const usuarioAcreditado = await login({ email, password });
+      console.log(usuarioAcreditado);
+      console.log("usuario logueado correctamente");
+    } catch (error) {
+      console.log(error.code);
+      console.log(error.message);
+    }
   };
 
   return (
     <>
       <div className="rounded-md flex flex-col justify-center items-center">
-        <form className=" flex flex-col bg-gray-200 shadow-md rounded px-8 py-6 mt-4 min-w-[20rem] md:w-[20rem]">
+        <form
+          onSubmit={handleIniciarSesion}
+          className=" flex flex-col bg-gray-200 shadow-md rounded px-8 py-6 mt-4 min-w-[20rem] md:w-[20rem]"
+        >
           <div className="mb-4">
             <label
               htmlFor="email"
@@ -29,6 +46,8 @@ const SignIn = () => {
             <div></div>
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               id="email"
               className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -53,6 +72,8 @@ const SignIn = () => {
               </div>
 
               <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 id="password"
                 className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -61,7 +82,6 @@ const SignIn = () => {
           </div>
           <div>
             <button
-              onClick={(e) => inciarSesion(e)}
               className="w-full bg-red-700  hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >

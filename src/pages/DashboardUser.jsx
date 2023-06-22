@@ -1,4 +1,4 @@
-import UnderConstruction from "../components/UnderConstruction";
+import Manzanita from "../components/Manzanita";
 
 const DashboardUser = () => {
   const mensaje = "Hola Soy el Dashboard Privado";
@@ -6,7 +6,7 @@ const DashboardUser = () => {
   return (
     <>
       <div className="flex container mx-auto min-h-screen items-start m-20 text-center">
-        <UnderConstruction mensaje={mensaje} />;
+        <Manzanita mensaje={mensaje}/>
       </div>
     </>
   );

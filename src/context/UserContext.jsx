@@ -1,5 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createContext, useContext } from "react";
+
+//importaciones de firebase
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../config/firebase";
 
 //comienzo definiendo este componente como context
 const UserContext = createContext();
@@ -8,6 +12,25 @@ const UserContext = createContext();
 const UserContextProvider = ({ children }) => {
   //inicializo el estado del usuario como false "deslogueado"
   const [user, setUser] = useState(false);
+
+  //user effect para controlar el estado de mi usuario
+  useEffect(() => {
+    console.log("use effect en acccionnnnnn pa");
+
+    const unsuscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+    return unsuscribe;
+  }),
+    [];
+
+
+    if (user==false){
+      return (
+        <h1 className="mt-20"> Loading App...</h1>
+      )
+    }
+
 
   //recordar tambien envolver todo el componente router del main.jsx porque sino no va a funcionar
   return (
