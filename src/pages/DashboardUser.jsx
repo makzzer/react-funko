@@ -1,7 +1,11 @@
 import Manzanita from "../components/Manzanita";
+import { useUserContext } from "../context/UserContext";
 
 const DashboardUser = () => {
-  const mensaje = "Hola Soy el Dashboard Privado";
+
+  const {user} = useUserContext()
+
+  const mensaje = "Hola🙂    "+user.email;
 
   return (
     <>
