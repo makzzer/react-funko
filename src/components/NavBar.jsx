@@ -36,7 +36,7 @@ const Nav = () => {
       classname: clasesita,
     },
     {
-      name: "DASHBOARD",
+      name: "MI CUENTA",
       to: "/dashboarduser",
       classname: clasesita,
     },
@@ -98,7 +98,7 @@ const Nav = () => {
                   if (user) {
                     return !(navlink.name === "INGRESAR");
                   } else {
-                    return !(navlink.name === "DASHBOARD");
+                    return !(navlink.name === "MI CUENTA");
                   }
                 })
                 .map((navlink) => {
