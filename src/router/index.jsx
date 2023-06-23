@@ -50,7 +50,7 @@ export const router = createBrowserRouter([
       {
         path: "/dashboarduser",
         element: <PrivateLayout />,
-        children: [{ index: true, element: <DashboardUser /> }],
+        children: [{ index: true, element: <DashboardUser grillaShop={grillaShop}/> }],
       },
     ],
   },

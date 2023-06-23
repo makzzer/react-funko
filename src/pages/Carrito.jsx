@@ -3,7 +3,7 @@ import ElemCarrito from "../components/ElemCarrito";
 import { useEffect } from "react";
 import { DetectarTamañoPantalla } from "../utilities/DetectarTamañoPantalla";
 import { NavLink } from "react-router-dom";
-import { useUserContext } from "../context/UserContext";
+
 
 const Carrito = () => {
   //desestructuro desde m context los metodos y el array de carrito para usarlo en este componente

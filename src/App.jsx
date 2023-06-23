@@ -1,6 +1,3 @@
-import Home from "./pages/Home";
-import ListaLanzamientos from "./components/ListaLanzamientos";
-
 
 
 export const elementosLanding = [
@@ -152,9 +149,7 @@ export const grillaShop = [
   /* img: "/multimedia_ funkoshop/multimedia/harry-potter/hermione-1.webp",*/
 }
 
-const App = () => {
-  return <></>;
-};
+
 
 //tengo que exportar así porque no me dejaba con mas de una export nombrada y una directa,  sino falla !!
-export default { App, elementosLanding, nuevosLanzamientos,grillaShop };
+export default {  elementosLanding, nuevosLanzamientos,grillaShop };
