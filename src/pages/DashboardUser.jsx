@@ -5,7 +5,8 @@ const DashboardUser = () => {
 
   const {user} = useUserContext()
 
-  const mensaje = "Hola🙂    "+user.email;
+  //const mensaje = "Hola🙂    "+user.email;
+  const mensaje = "Hola Mica, me encanta cogerte toda la manzanita 🍎🖤";
 
   return (
     <>
