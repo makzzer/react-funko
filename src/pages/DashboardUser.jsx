@@ -37,14 +37,15 @@ const DashboardUser = () => {
     <div className="m-2">
     <AdminListadoProductos grillaShop={grillaShop}/>
     </div>
-   <Manzanita/>
-    
+  
+    <Manzanita/>
 
 
 
 
 
     </div>
+ 
      
     </>
   );

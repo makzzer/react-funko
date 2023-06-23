@@ -21,9 +21,9 @@ const UnderConstruction = () => {
 
   return (
     <>
-      <div className="transition-all md:mb-20 mb-10 duration-700 flex flex-col md:flex-row  justify-center gap-6 items-center md:mx-0 mx-2 md:text-5xl text-4xl container font-mono font-bold bg-gray-900  mt-5 md:mt-20 pb-6 pt-6">
+      <div className="transition-all min-w-full justify-center content-center md:mb-20 mb-10 duration-700 flex flex-col md:flex-row  items-center md:text-5xl text-4xl container font-mono font-bold bg-gray-900  mt-5 md:mt-20 pb-6 pt-6">
 
-        <div className="">
+        <div className="flex mx-auto">
           <NavLink
             onClick={cerrarSesion}
             to={"/"}
