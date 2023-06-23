@@ -55,6 +55,8 @@ const AdminListadoProductos = ({grillaShop}) => {
                   <td className="border p-2">{elem.id}</td>
                   <td className="border p-2">{elem.title}</td>
                   <td className="border p-2">{elem.subTitle}</td>
+                  <td className="border p-2"><ion-icon name="create-outline"></ion-icon></td>
+                  <td className="border p-2"><ion-icon name="trash-outline"></ion-icon></td> 
                 </tr>
               ))}
             </tbody>
