@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/shop",
-        element: <Shop grillaShop={grillaShop} />,
+        element: <Shop/>,
       },
       {
         path: "/ingresar",

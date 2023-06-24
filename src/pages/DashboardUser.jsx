@@ -1,7 +1,6 @@
 import AdminListadoProductos from "../components/AdminListadoProductos";
 import { useUserContext } from "../context/UserContext";
 import Manzanita from "../components/Manzanita";
-import CrearProductoForm from "../components/CrearProductoFORM";
 
 
 
@@ -38,10 +37,6 @@ const DashboardUser = () => {
 
         <div className="m-2">
           <AdminListadoProductos />
-
-
-
-
           
         </div>
 

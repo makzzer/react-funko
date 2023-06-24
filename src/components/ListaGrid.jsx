@@ -1,7 +1,12 @@
 import ItemLanzamiento from "./ItemLanzamiento";
 
-const ListaGrid = ({ grillaShop,agregarProductoCarrito }) => {
-  return grillaShop.map((itemGrilla) => (
+import { useProductoContext } from "../context/ProductosContext";
+
+const ListaGrid = ({ agregarProductoCarrito }) => {
+  //me traigo el context con todos los productos y lo desestructuro
+  const { productos } = useProductoContext();
+
+  return productos.map((itemGrilla) => (
     <>
       <div className="py-2">
         <ItemLanzamiento

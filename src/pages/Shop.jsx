@@ -1,7 +1,6 @@
 import ListaGrid from "../components/ListaGrid";
 
-const Shop = ({ grillaShop }) => {
-
+const Shop = () => {
   return (
     <>
       {/*este es el div del container general*/}
@@ -47,10 +46,7 @@ const Shop = ({ grillaShop }) => {
         <main className="container flex flex-col md:max-w-6xl">
           <div className="p-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10">
-              <ListaGrid
-                grillaShop={grillaShop}
-                //agregarProductoCarrito={agregarProductoCarrito}
-              />
+              <ListaGrid />
             </div>
           </div>
         </main>
