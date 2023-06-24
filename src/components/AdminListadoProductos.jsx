@@ -42,7 +42,7 @@ const AdminListadoProductos = ({ grillaShop }) => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className=" m-2 md:m-0 border w-full border-gray-300 px-4 py-2 rounded-lg "
           />
-          <NavLink className="bg-red-700 inline-block md:py-2 flex-shrink-0 md:px-4 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+          <NavLink className="bg-red-700 md:w-auto md:flex-shrink-0 md:py-2 w-full flex-shrink-0 md:px-4 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg">
             Crear Nuevo
           </NavLink>
         </div>
