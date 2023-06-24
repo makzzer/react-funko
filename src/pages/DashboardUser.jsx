@@ -35,7 +35,7 @@ const DashboardUser = () => {
       <div className="transition-all duration-700 min-h-screen mx-auto max-w-6xl text-center items-center flex-col md:mt-20 mt-10">
      
         <div className="flex md:justify-between md:flex-row flex-col md:mt-24 md:me-auto mb-10 mt-12 mt-22 m-2 pt-14">
-          <h1 className="md:text-4xl text-3xl md:text-start text-center my-2 md:my-0 md:me-auto">
+          <h1 className="md:text-4xl font-semibold text-3xl md:text-start text-center my-2 md:my-0 md:me-auto">
             Listado de Productos
           </h1>
 
