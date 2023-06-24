@@ -1,8 +1,8 @@
 import AdminListadoProductos from "../components/AdminListadoProductos";
 import { useUserContext } from "../context/UserContext";
 import Manzanita from "../components/Manzanita";
-import { grillaShop } from "../App";
-import { NavLink } from "react-router-dom";
+
+
 
 const DashboardUser = () => {
   const { user } = useUserContext();
