@@ -42,8 +42,8 @@ const Shop = () => {
           <div className="flex">
             <input
               type="text"
-              placeholder="Buscá tu pop!"
-              className="w-full border border-gray-900 rounded-md py-3 px-6 text-base focus:outline-none focus:ring-2 focus:ring-gray-900  md:w-[55rem]"
+              placeholder="Busca tu funko"
+              className="w-full border border-gray-300 rounded-lg py-3 px-6   md:w-[55rem]"
             />
           </div>
         </form>
