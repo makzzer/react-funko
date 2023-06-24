@@ -88,6 +88,26 @@ const grillaShop = [
     tag1: "tom riddle",
     tag2: "slitherin",
   },
+  {
+    id: 8,
+    title: "tu vieja",
+    subTitle: "hp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
+    precio: 8000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "tom riddle",
+    tag2: "slitherin",
+  },
+  {
+    id: 9,
+    title: "la tuya test",
+    subTitle: "hp",
+    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
+    precio: 11000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "tom riddle",
+    tag2: "slitherin",
+  },
 ];
 
 //creo el provider
