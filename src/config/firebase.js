@@ -2,6 +2,9 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut } from "firebase/auth";
+import {getStorage, ref, uploadBytes} from "firebase/storage"
+
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -38,6 +41,27 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+//creo el storage para subir archivos, tal cual el auth de abajo
+export const storage = getStorage(app)
+
+
+
+//----------METODOS PARA SUBIR ARCHIVOS---------------//
+export const subirArchivo = (file)=>{
+  const storageRef = ref(storage,'some-child')
+  uploadBytes(storageRef,file).then(snapshot=>{
+    console.log(snapshot)
+  })
+}
+
+
+
+
+
+
+//----------METODOS PARA ADMINISTRAR USUARIO---------------//
+
 
 //este auth me va a traer toda la configuracion de mi proyecto
 export const auth = getAuth(app)

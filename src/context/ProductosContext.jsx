@@ -49,9 +49,9 @@ const grillaShop = [
 
   {
     id: 4,
-    title: "darth maul",
-    subTitle: "star wars",
-    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
+    title: "Charmander",
+    subTitle: "Pokemon",
+    img: "https://firebasestorage.googleapis.com/v0/b/react-funko-819d3.appspot.com/o/pokemon%2Fcharmander-1.webp?alt=media&token=5d11ce60-0b6e-48e3-a6bd-6da86c153c34",
     precio: 8300.0,
     cuotas: "6 cuotas sin interés",
     tag1: "imperio",
