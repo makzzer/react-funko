@@ -1,5 +1,4 @@
-import { createContext, useEffect, useState } from "react";
-import { useContext } from "react";
+import { createContext, useEffect, useState, useContext } from "react";
 
 //Creo el contexto para compartir el elemento carrito
 export const CarritoContext = createContext();
