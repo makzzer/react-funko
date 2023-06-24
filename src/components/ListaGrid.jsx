@@ -10,7 +10,7 @@ const ListaGrid = ({ agregarProductoCarrito }) => {
     <>
       <div className="py-2">
         <ItemLanzamiento
-          grillaShop={grillaShop}
+         
           key={itemGrilla.id}
           id={itemGrilla.id}
           title={itemGrilla.title}
