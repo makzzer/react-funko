@@ -3,10 +3,24 @@ import ListaItemsTienda from "../components/ListaItemsTienda";
 import Branding from "../components/Branding";
 import { useState } from "react";
 
+//context productos
+import { useProductoContext } from "../context/ProductosContext";
+
+
 const Home = ({ elementosLanding, nuevosLanzamientos }) => {
+
+  const {productos} = useProductoContext()
+
+  //voy a cortar 3 productos para pasarselo a la lista de items lanzamiento
+
+  const itemslanzamientoSlice = productos.slice(0,3)
+
+
   const [elementosLand, SetElem] = useState(elementosLanding);
 
   const [ultimosLanzamientos, setNewLanz] = useState(nuevosLanzamientos);
+
+
 
   return (
     <>
@@ -34,7 +48,7 @@ const Home = ({ elementosLanding, nuevosLanzamientos }) => {
             <div className="p-2">
 
               <div className="grid px-12 grid-cols-1 md:grid-cols-3 gap-4">
-                <ListaLanzamientos ultimosLanzamientos={ultimosLanzamientos} />
+                <ListaLanzamientos ultimosLanzamientos={itemslanzamientoSlice} />
               </div>
 
             </div>

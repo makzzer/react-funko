@@ -77,14 +77,14 @@ const Shop = () => {
 
         <div className="flex justify-center my-4">
           <button
-            className="px-4 py-2 text-sm bg-red-200 text-gray-700 mr-2"
+            className="px-4 py-2 text-sm font-semibold bg-red-200 text-gray-700 mr-2"
             onClick={handlePaginaAnterior}
             disabled={paginaActual === 0}
           >
             Anterior
           </button>
           <button
-            className="px-4 py-2 text-sm bg-red-200 text-gray-700"
+            className="px-4 py-2 text-sm font-semibold bg-red-200 text-gray-700"
             onClick={handlePaginaSiguiente}
             disabled={productosPagina.length < elementosPorPagina}
           >
