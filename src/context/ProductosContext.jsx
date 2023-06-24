@@ -80,9 +80,9 @@ const grillaShop = [
   },
   {
     id: 7,
-    title: "ron weasley",
-    subTitle: "hp",
-    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
+    title: "Harry Potter",
+    subTitle: "Harry Potter",
+    img: "https://firebasestorage.googleapis.com/v0/b/react-funko-819d3.appspot.com/o/harry-potter%2Fharry-1.webp?alt=media&token=6768c5c7-d6e4-4b4e-a864-933f1dda4cee",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
@@ -90,9 +90,9 @@ const grillaShop = [
   },
   {
     id: 8,
-    title: "tu vieja",
-    subTitle: "hp",
-    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
+    title: "Hermione",
+    subTitle: "Harry Potter",
+    img: "https://firebasestorage.googleapis.com/v0/b/react-funko-819d3.appspot.com/o/harry-potter%2Fhermione-1.webp?alt=media&token=76855b42-5297-4598-af2b-e0902014ec0a",
     precio: 8000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
@@ -100,14 +100,72 @@ const grillaShop = [
   },
   {
     id: 9,
-    title: "la tuya test",
-    subTitle: "hp",
-    img: "https://media.forbiddenplanet.com/products/7e/c9/1a152ab3a5c918621fd254eee616cc310ec6.png",
+    title: "Luna Lovegood",
+    subTitle: "Harry Potter",
+    img: "https://firebasestorage.googleapis.com/v0/b/react-funko-819d3.appspot.com/o/harry-potter%2Fluna-1.webp?alt=media&token=6eb4deae-99af-436a-8969-e1310b47f639",
     precio: 11000.0,
     cuotas: "3 cuotas sin interés",
     tag1: "tom riddle",
     tag2: "slitherin",
   },
+
+  {
+    id: 10,
+    title: "Snape Patronus",
+    subTitle: "Harry Potter",
+    img: "https://firebasestorage.googleapis.com/v0/b/react-funko-819d3.appspot.com/o/harry-potter%2Fsnape-patronus-1.webp?alt=media&token=728eae9b-a843-42ba-90d1-85a8547aca9a",
+    precio: 11000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "tom riddle",
+    tag2: "slitherin",
+  },
+
+
+  {
+    id: 11,
+    title: "Baby Yoda",
+    subTitle: "Star Wars",
+    img: "https://firebasestorage.googleapis.com/v0/b/react-funko-819d3.appspot.com/o/star-wars%2Fbaby-yoda-1.webp?alt=media&token=6e7b736e-cdf9-4f79-9780-990c3bf44552",
+    precio: 11000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "imperio",
+    tag2: "destructor",
+  },
+
+  {
+    id: 12,
+    title: "Boba Fett",
+    subTitle: "Star Wars",
+    img: "https://firebasestorage.googleapis.com/v0/b/react-funko-819d3.appspot.com/o/star-wars%2Fbobbafeth-1.webp?alt=media&token=972e5f77-cf99-4e15-af53-bb9cd2471816",
+    precio: 11000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "imperio",
+    tag2: "destructor",
+  },
+
+  {
+    id: 13,
+    title: "Luke Skywalker",
+    subTitle: "Star Wars",
+    img: "https://firebasestorage.googleapis.com/v0/b/react-funko-819d3.appspot.com/o/star-wars%2Fluke-1.webp?alt=media&token=923021bc-d2cf-48fd-bdc1-2df250c9fc07",
+    precio: 11000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "imperio",
+    tag2: "destructor",
+  },
+
+  {
+    id: 14,
+    title: "Trooper Sword",
+    subTitle: "Star Wars",
+    img: "https://firebasestorage.googleapis.com/v0/b/react-funko-819d3.appspot.com/o/star-wars%2Ftrooper-1.webp?alt=media&token=a397dbca-11a4-40c4-8b6b-a12125c4b818",
+    precio: 11000.0,
+    cuotas: "3 cuotas sin interés",
+    tag1: "imperio",
+    tag2: "destructor",
+  },
+
+
 ];
 
 //creo el provider
