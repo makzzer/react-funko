@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import { useProductoContext } from "../context/ProductosContext";
@@ -9,9 +9,11 @@ const AdminListadoProductos = () => {
   const [paginaActual, setPaginaActual] = useState(0);
   const elementosPorPagina = 8;
 
+
   const handlePaginaAnterior = () => {
     if (paginaActual > 0) {
       setPaginaActual((prevPagina) => prevPagina - 1);
+      
     }
   };
 
@@ -19,6 +21,7 @@ const AdminListadoProductos = () => {
     const ultimaPagina = Math.ceil(productos.length / elementosPorPagina) - 1;
     if (paginaActual < ultimaPagina) {
       setPaginaActual((prevPagina) => prevPagina + 1);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -121,7 +124,8 @@ const AdminListadoProductos = () => {
               className="px-4 py-2 text-sm bg-red-200 text-gray-700"
               onClick={handlePaginaSiguiente}
               disabled={
-                paginaActual === Math.ceil(productos.length / elementosPorPagina) - 1
+                paginaActual ===
+                Math.ceil(productos.length / elementosPorPagina) - 1
               }
             >
               Siguiente &gt;
