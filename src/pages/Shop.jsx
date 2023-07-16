@@ -14,6 +14,7 @@ const Shop = () => {
   const handlePaginaAnterior = () => {
     if (paginaActual > 0) {
       setPaginaActual((prevPagina) => prevPagina - 1);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -21,6 +22,7 @@ const Shop = () => {
     const ultimaPagina = Math.ceil(productos.length / elementosPorPagina) - 1;
     if (paginaActual < ultimaPagina) {
       setPaginaActual((prevPagina) => prevPagina + 1);
+      window.scrollTo(0, 0);
     }
   };
 

@@ -13,6 +13,7 @@ const AdminListadoProductos = () => {
   const handlePaginaAnterior = () => {
     if (paginaActual > 0) {
       setPaginaActual((prevPagina) => prevPagina - 1);
+      window.scrollTo(0, 0);
       
     }
   };
