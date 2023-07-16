@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import axios from "axios";
 
-//creo el context
+// Creo el context
 export const ProductosContext = createContext();
 
 const grillaShop = [
@@ -168,18 +169,34 @@ const grillaShop = [
 
 ];
 
-//creo el provider
+// Creo el provider
 const ProductosProvider = ({ children }) => {
-  //defino que arranque con 2 random o que lo levante de localStorage
+  // Defino que arranque con 2 random o que lo levante de localStorage
   const productosIniciales =
     JSON.parse(localStorage.getItem("productosTienda")) || grillaShop;
 
-  //ahora le creo el estado
-
+  // Ahora le creo el estado
   const [productos, setProductos] = useState(productosIniciales);
 
-  //quedo atento a los cambios en carrito
+  // Obtener los datos de los productos desde la API al cargar la aplicación
+  useEffect(() => {
+    // Hacemos una solicitud a la API para obtener los productos usando Axios
+    axios.get("/api/productos")
+      .then((response) => {
+        // La respuesta de Axios incluye directamente los datos (response.data)
+        // Actualizamos el estado de los productos en el contexto con los datos recibidos
+        setProductos(response.data);
+        // Almacenamos los productos en localStorage para futuras cargas de la aplicación
+        localStorage.setItem("productosTienda", JSON.stringify(response.data));
+        
+      })
+      .catch((error) => {
+        console.error("Error al obtener los productos:", error);
+      });
+  }, []);
 
+  // Quedo atento a los cambios del carrito
+  // El useEffect que tienes para actualizar localStorage no cambia
   useEffect(() => {
     localStorage.productosTienda = JSON.stringify(productos);
   }, [productos]);
@@ -191,9 +208,8 @@ const ProductosProvider = ({ children }) => {
   );
 };
 
-//exporto el provider
+// Exporto el provider
 export default ProductosProvider;
 
-//Creo minihook para usarlo
-
+// Creo minihook para usarlo
 export const useProductoContext = () => useContext(ProductosContext);
